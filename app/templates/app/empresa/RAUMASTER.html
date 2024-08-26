@@ -1,0 +1,23 @@
+{% extends 'app/layout.html' %}
+{% load static %}
+
+{% block main %}
+
+    <section>
+        <div class="agierre-content company-content">
+            <div class="company-page-div">
+                <h1 id="company-name">raummaster</h1>
+                <p>AGIERRE
+
+                    A AGIERRE produz equipamentos industriais para aplicações farmacêuticas, químicas e alimentícias adequados para manuseio de pós e grânulos, incluindo operações de enchimento, descarga, pesagem, mistura, dosagem e transporte.
+                    <br>
+                    Website: https://www.agierre.eu</p>
+            </div>
+
+            <div class="company-logo-container">
+                <img src="{% static 'app/logos/LOGOs_200px_AGUIERRE.jpg' %}" alt="">
+            </div>
+        </div>
+    </section>
+
+{% endblock %}
