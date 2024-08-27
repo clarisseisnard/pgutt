@@ -373,6 +373,7 @@ main {
 
 #img-text {
     color: #ffffff;
+    /* color: red; */
     font-size: 40px;
 }
 
@@ -630,7 +631,7 @@ main {
     font-size: 10px;
 
     background-color: #182C37;
-    background: url('./MundiBlue_0.jpg');
+    background: url('./MundiBlue2.png');
     background-repeat: no-repeat;
     background-position: center;
     /* filter: brightness(50%); */
@@ -1104,6 +1105,7 @@ button[type="submit"] {
 
     .text-container {
         padding: 0;
+        /* border: 2px solid red; */
     }
 
     .main-h1-container {
@@ -1127,13 +1129,9 @@ button[type="submit"] {
     }
 
     .subtext-img {
-      width: 100%;
-      /* border: 5px solid red; */
       img {
-        display:block; 
         width: 280px;
-        top: 1320px;
-        left: 660px;
+        left: 700px;
         height: auto;
         border-radius: 20px;
       }
@@ -1144,7 +1142,7 @@ button[type="submit"] {
     }
 
     .diretrizes-text-container {
-        width: 100%;
+        width: fit-content;
         margin: 0;
         left: 150px;
         padding: 0;
@@ -1164,8 +1162,9 @@ button[type="submit"] {
     .equipe-text-container {
         display: block;
         position: relative;
-        width: 100%;
+        width: fit-content;
         left: 150px;
+        width: fit-content;
         margin: 0;
         padding: 0;
     }
@@ -1177,6 +1176,7 @@ button[type="submit"] {
     .info-container {
         display: block;
         position: relative;
+        width: fit-content;
         left: 150px;
         margin: 0;
     }
@@ -1184,12 +1184,20 @@ button[type="submit"] {
     .contato-text-container {
       position: relative;
       /* border: 2px solid red; */
-      width: 100%;
+      width: fit-content;
       margin: 0;
       left: 150px;
       text-align: left;
       font-size: 34px;
       padding: 2rem 0;
+    }
+
+    .copyright-text-container {
+      width: fit-content;
+    }
+
+    .footer-icons {
+      width: fit-content;
     }
   
 }
@@ -1249,6 +1257,7 @@ button[type="submit"] {
       .text-content {
         display: block;
         padding: 0;
+        /* border: 2px solid red; */
       }
 
     .text-container {
@@ -1383,7 +1392,7 @@ button[type="submit"] {
       }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 800px) {
   .menu-icons #bar-open,
   .menu-icons #x-closed {
     display: block;
@@ -1396,11 +1405,18 @@ button[type="submit"] {
     float: left;
   }
 
+  #logo {
+    width: 150px;
+    height: auto;
+  }
+
   .navbar {
+    /* display: none; */
     position: fixed;
     padding: 15px;
     max-width: 100%;
     width: 100%;
+    /* border: 2px solid red; */
     /* background-color: transparent; */
     /* box-shadow: none; */
   }
@@ -1455,6 +1471,8 @@ button[type="submit"] {
   .menu-icons #bar-open {
     position: relative;
     top: 10px;
+    right: 5px;
+    /* border: 2px solid red; */
     cursor: pointer;
   }
 
@@ -1469,6 +1487,7 @@ button[type="submit"] {
   }
 
   .image-text-container {
+    /* display: none; */
     /* border: 2px solid red; */
     top: 200px;
     left: 20px;
@@ -1481,7 +1500,8 @@ button[type="submit"] {
   }
 
   .main-h1-container {
-    width: 100%;
+    max-width: 100%;
+    display: none;
   }
 
   .institucional-section {
@@ -1516,7 +1536,7 @@ button[type="submit"] {
     position: relative;
     margin: 0;
     /* border: 2px solid rgb(0, 255, 13); */
-    width: 100%;
+    width: fit-content;
     left: 30px;
   }
 
@@ -1527,7 +1547,7 @@ button[type="submit"] {
     padding: 2rem 0;
     font-size: 15px;
     /* border: 2px solid rgb(0, 255, 13); */
-    width: 100%;
+    width: fit-content;
     left: 30px;
     * {
       max-width: 350px;
@@ -1535,12 +1555,14 @@ button[type="submit"] {
   }
 
   .subtext-img {
-    width: 100%;
+    display: none;
+    max-width: 100%;
     /* border: 5px solid red; */
     img {
-      display:block; 
-      width: 220px;
-      left: 440px;
+      /* position: relative; */
+      display: none; 
+      width: 150px;
+      left: 400px;
       height: auto;
       border-radius: 20px;
     }
@@ -1548,13 +1570,15 @@ button[type="submit"] {
 
   .icon-cards-container {
     /* border: 2px solid red; */
+    max-width: 100%;
     padding: 4rem 0;
   }
 
   .diretrizes-text-container {
     /* position: relative; */
     /* border: 2px solid red; */
-    width: 100%;
+    width: fit-content;
+    /* width: 100%; */
     margin: 0;
     left: 30px;
     font-size: 34px;
@@ -1564,7 +1588,7 @@ button[type="submit"] {
   .contato-text-container {
     position: relative;
     /* border: 2px solid red; */
-    width: 100%;
+    width: fit-content;
     margin: 0;
     left: 30px;
     text-align: left;
@@ -1577,12 +1601,14 @@ button[type="submit"] {
     position: relative;
     /* left: 30px; */
     /* border: 2px solid red; */
+    max-width: 100%;
     width: 100%;
     padding-top: 2rem;
     margin: 0;
   }
 
   .icon-card {
+    /* display: none; */
     /* border: 2px solid red; */
     font-size: 15px;
     margin-bottom: 3rem;
@@ -1592,8 +1618,10 @@ button[type="submit"] {
   }
 
   .equipe-div-container {
+    /* display: none; */
     /* border: 2px solid red; */
     padding: 0;
+    max-width: 100%;
     height: 100%;
     width: 100%;
   }
@@ -1605,7 +1633,8 @@ button[type="submit"] {
     padding: 0;
     font-size: 16px;
     /* border: 2px solid rgb(0, 255, 13); */
-    width: 100%;
+    width: fit-content;
+    /* width: 100%; */
     left: 30px;
   }
 
@@ -1621,6 +1650,7 @@ button[type="submit"] {
 
   .footer-container {
     /* border: 2px solid red; */
+    /* display: none; */
     padding: 0;
     max-width: 100%;
   }
@@ -1634,7 +1664,8 @@ button[type="submit"] {
 
   .info-container {
     /* border: 2px solid red; */
-    display: block;
+    width: fit-content;
+    /* display: block; */
     position: relative;
     top: 30px;
     left: 30px;
@@ -1642,9 +1673,23 @@ button[type="submit"] {
   }
 
   .footer-icons {
-    margin-left: 30px;
+    /* position: absolute; */
+    /* border: 2px solid red; */
+    width: fit-content;
+    margin: auto;
     img {
       width: 40px;
     }
   }
+
+  .copyright-text-container {
+    /* border: 2px solid red; */
+    width: fit-content;
+  }
+
+  .contato-text-container {
+    width: fit-content;
+    /* border: 2px solid red; */
+  }
+
 }

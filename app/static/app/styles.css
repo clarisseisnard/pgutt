@@ -373,6 +373,7 @@ main {
 
 #img-text {
     color: #ffffff;
+    /* color: red; */
     font-size: 40px;
 }
 
@@ -630,7 +631,7 @@ main {
     font-size: 10px;
 
     background-color: #182C37;
-    background: url('./MundiBlue_0.jpg');
+    background: url('./MundiBlue2.png');
     background-repeat: no-repeat;
     background-position: center;
     /* filter: brightness(50%); */
