@@ -1664,6 +1664,7 @@ button[type="submit"] {
 
   .info-container {
     /* border: 2px solid red; */
+    max-width: 100%;
     width: fit-content;
     /* display: block; */
     position: relative;
