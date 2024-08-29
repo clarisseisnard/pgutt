@@ -19,6 +19,7 @@
 
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 *, *::before, *::after {
@@ -1223,6 +1224,37 @@ button[type="submit"] {
     .footer-icons {
       width: 100%;
     }
+
+    .empresas-text-container {
+      /* border: 2px solid red; */
+      h1, p {
+        margin-left: 150px;
+      }
+    }
+
+    .company {
+      margin-left: 150px;
+    }
+
+    .company-containers {
+      padding-bottom: 50px;
+    }
+
+    .catalogos-text-container {
+      /* border: 2px solid red; */
+      width: 55%;
+      margin: auto;
+      padding: 0;
+      h1, p {
+        margin: 0;
+      }
+    }
+
+    .pop-up-download {
+      padding: 3rem;
+      width: 50%;
+      height: 60%;
+    }
   
 }
 
@@ -1695,6 +1727,7 @@ button[type="submit"] {
     /* border: 2px solid red; */
     /* display: none; */
     padding: 0;
+    min-height: 100%;
     max-width: 100%;
   }
 
