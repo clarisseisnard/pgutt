@@ -5,8 +5,8 @@
     <section style="margin-top: 10rem; height: 80vh;" class="catalogos-page">
         <div class="catalogos-text-container">
             <h1>Catálogos</h1>
-            <p>Preencha o formulário para baixar o catálogo.</p>
-            <p>Após preenchimento do formulário será redirecionado para o download do catálogo.<br>Seus dados estão protegidos.</p>
+            <p>Preencha os campos do formulário para baixar catálogo.</p>
+            <p>Após preenchimento, será redirecionado para download.<br>Seus dados estão protegidos.</p>
         </div>
         
         <div class="table-container">
@@ -41,21 +41,31 @@
         <!-- <div id="overlay"> -->
             <div class="pop-up-download">
                 <div>
-                    <h1 id="download-h1text">Baixar catálogo</h1>
+                    <h1 id="download-h1text">Preencha os dados</h1>
                 </div>
                 <div>
-                    <form action="mailto:" method="GET" class="download-form">
+                    <form method="POST" class="download-form" action="{% url 'catalogos' %}">
+                        {% csrf_token %}
                         <div>
-                            <h4>Assunto</h4>
-                            <input type="text" placeholder="Assunto" name="subject" required />
+                            <label for="nome">Nome completo</label>
+                            <input type="text" name="nome" id="nomeForm" required>
+
+                            <label for="email">E-mail</label>
+                            <input type="text" name="email" id="emailForm" required>
+
+                            <label for="celular">Celular</label>
+                            <input type="text" name="celular" id="celularForm" required>
+
+                            <label for="empresa">Nome da empresa / Localidade</label>
+                            <input type="text" name="empresa" id="empresaForm" required>
+
+                            <label for="produto">Produto de interesse / Empresa representada</label>
+                            <input type="text" name="produto" id="produtoForm" required>
+
+                            <label for="motivo">Motivo do contato</label>
+                            <textarea name="motivo" id="motivoForm" style="resize: none;" required></textarea>
                         </div>
-                        <div>
-                            <h4>Sua mensagem</h4>
-                            <textarea placeholder="Sua mensagem" name="body" style="resize: none;" required></textarea>
-                        </div>
-                        <div>
-                          <button type="submit">Faça o download</button>
-                        </div>
+                        <button type="submit">Enviar</button>
                     </form>
                 </div>
                 <div class="icon-popup">

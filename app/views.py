@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .models import Info
 
 # Create your views here.
 
@@ -9,7 +10,19 @@ def empresas(request):
     return render(request, 'app/empresas.html')
 
 def catalogos(request):
-    return render(request, "app/catalogos.html")
+    if request.method == "POST":
+        nome = request.POST.get("nome")
+        email = request.POST.get("email")
+        celular = request.POST.get("celular")
+        empresa = request.POST.get("empresa")
+        produto = request.POST.get("produto")
+        motivo = request.POST.get("motivo")
+
+        update_info = Info(nome=nome, contato_email=email, contato_celular=celular, empresa=empresa, produto_de_interesse=produto, motivo=motivo)
+        update_info.save()
+        return render(request, "app/index.html")
+    if request.method == "GET":
+        return render(request, "app/catalogos.html")
 
 def agierre(request):
     return render(request, 'app/empresa/agierre.html')
@@ -47,8 +60,11 @@ def lordsteel(request):
 def maronsteel(request):
     return render(request, 'app/empresa/MARONSTEEL.html')
 
-def raumaster(request):
-    return render(request, 'app/empresa/RAUMASTER.html')
+def raumasterpaper(request):
+    return render(request, 'app/empresa/RAUMASTERpaper.html')
+
+def raumasteroy(request):
+    return render(request, 'app/empresa/RAUMASTERoy.html')
 
 def schlick(request):
     return render(request, 'app/empresa/SCHLICK.html')
