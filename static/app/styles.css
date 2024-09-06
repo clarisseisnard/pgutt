@@ -798,6 +798,8 @@ main {
 
 .company-logo {
 
+  display: flex;
+
   img {
     position: absolute;
     width: 140px;
@@ -1013,6 +1015,10 @@ tbody tr:nth-last-of-type(odd) {
 
 .popup {
   color: var(--laranjinha);
+}
+
+.popup:hover {
+  color: #713509;
 }
 
 .icon-popup {
@@ -1540,6 +1546,7 @@ button[type="submit"] {
   .navbar.openNav .responsive-nav-items {
     display: flex;
     position: fixed;
+    touch-action: none;
     top: 0;
     left: 0;
     z-index: 100;
@@ -1800,7 +1807,7 @@ button[type="submit"] {
       margin: auto;
     }
     img:not(:last-child){
-      margin-right: 1rem;
+      margin-right: 0.1rem;
     }
   }
 
@@ -1816,6 +1823,107 @@ button[type="submit"] {
     margin: 0;
     padding-top: 3rem;
     /* border: 2px solid red; */
+  }
+
+  .empresas-text-container {
+    h1 {
+      font-size: 33px;
+      max-width: 300px;
+      margin-left: 30px;
+    }
+  }
+
+  .company-containers {
+    position: relative;
+    /* border: 2px solid red; */
+  }
+
+  .company-wrapper {
+    /* border: 2px solid red; */
+    position: relative;
+  }
+
+  .company {
+    /* border: 2px solid red; */
+    margin: auto;
+    padding: 2.5rem;
+    width: 90%;
+    margin-bottom: 2rem;
+    transition: none;
+    p {
+      max-width: 300px;
+    }
+  }
+
+  .company:hover {
+    transform: none;
+  }
+
+  .company-logo {
+    /* display: block; */
+    display: flex;
+    flex-direction: column;
+    /* position: relative; */
+    padding-top: 0;
+    margin-bottom: 1rem;
+    height: fit-content;
+    width: 100%;
+    /* border: 2px solid red; */
+   img {
+    order: 1;
+    position: relative;
+    display: block;
+    left: 0px;
+    top: 0;
+    margin: 0;
+    width: 35%;
+    margin: 1rem 0;
+    /* border: 2px solid red; */
+   }
+   h1 {
+    order: 2;
+    position: relative;
+    /* border: 2px solid red; */
+    height: fit-content;
+    width: 100%;
+    display: block;
+   }
+  }
+
+  .pop-up-download {
+    width: 90%;
+    padding: 1.7rem;
+  }
+
+  .company-page-div {
+    margin: auto;
+    margin-left: auto;
+    width: 90%;
+  }
+
+  .catalogos-text-container {
+    width: fit-content;
+    margin-top: 0;
+    /* border: 2px solid red; */
+    h1 {
+      margin-left: 30px;
+    }
+
+    p {
+      margin-left: 30px;
+    }
+  }
+
+  .table-container  {
+    /* border: 2px solid rgb(0, 0, 0); */
+    padding: 0.5rem;
+    width: fit-content;
+  }
+
+  table {
+    /* border: 2px solid red; */
+    margin: auto;
+    width: fit-content;
   }
 
 }
