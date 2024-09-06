@@ -28,7 +28,7 @@ html {
 
 html, body {
     margin: 0;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
     padding: 0;
 }
 
@@ -704,6 +704,10 @@ main {
     width: 50px;
     margin-right: 2rem;
     height: auto;
+    transition: all 0.25s ease-in-out;
+  }
+  img:hover {
+    transform: translateY(-8%);
   }
 }
 
@@ -863,6 +867,14 @@ main {
   padding: 3rem;
   /* border: 2px solid red; */
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.108);
+
+  a {
+    color: var(--laranjinha);
+  }
+
+  a:hover {
+    color: #713509;
+  }
 
 }
 
@@ -1473,6 +1485,14 @@ button[type="submit"] {
 }
 
 @media screen and (max-width: 800px) {
+   /* html {
+    overflow: auto;
+  }
+   */
+  .fixed-position {
+    position: fixed;
+ }
+
   .menu-icons #bar-open,
   .menu-icons #x-closed {
     display: block;

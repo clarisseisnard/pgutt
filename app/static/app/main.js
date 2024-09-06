@@ -7,16 +7,26 @@ document.addEventListener('DOMContentLoaded', function() {
     if (navOpenBtn) {
       navOpenBtn.addEventListener("click", () => {
         nav.classList.add("openNav");
-        console.log("clicked");
+        $("body").css("position,", "fixed");
+        console.log("mobile menu opened");
+        console.log("overflowhidden")
       });
     }
   
     if (navCloseBtn) {
       navCloseBtn.addEventListener("click", () => {
         nav.classList.remove("openNav");
+        $("body").css("position", "");
+        console.log("overflow working again")
       });
-      console.log("clicked");
+      console.log("mobile menu closed");
     }
+
+    $(".responsive-nav-items > li > a").click(function() {
+      $(".responsive-nav-items").css("display", "none");
+      nav.classList.remove("openNav")
+      console.log('mobile menu auto close')
+    })
   });
 
 window.onload = function () {
@@ -61,7 +71,7 @@ document.addEventListener('DOMContentLoaded', function() {
       popupscreen.classList.remove("openpopup");
       overlay.classList.remove("openpopup");
       $("body").css("overflow", "");
-      console.log('closed');
+      console.log('Popup closed');
     });
   }
 });

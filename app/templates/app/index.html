@@ -4,7 +4,8 @@
 <html>
     <head>
         <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+        <meta name="viewport" content="width=device-width, height=device-height">
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" 
@@ -50,7 +51,7 @@
                                     </ul>
                                 </li>
                                 <li class="dropright">
-                                    <a href="">Equipamentos de Alta pressão</a>
+                                    <a href="">Equipamentos de Alta Pressão</a>
                                     <ul class="dropright-menu" style="width: 150px;">
                                         <li><a href="{% url 'bft' %}">BFT</a></li>
                                         <li><a href="{% url 'bhdt' %}">BHDT</a></li>
@@ -59,6 +60,7 @@
                                 <li class="dropright">
                                     <a href="">Equipamentos para Indústria de Papel e Celulose</a>
                                     <ul class="dropright-menu" style="width: 200px;">
+                                        <li><a href="{% url 'gigkarasek' %}">GIG KARASEK</a></li>
                                         <li><a href="{% url 'raumasteroy' %}">RAUMASTER OY</a></li>
                                         <li><a href="{% url 'raumasterpaper' %}">RAUMASTER PAPER</a></li>
                                     </ul>
@@ -75,7 +77,7 @@
                                 <li class="dropright">
                                     <a href="">Fornos</a>
                                     <ul class="dropright-menu" style="width: 200px;">
-                                        <li><a href="{% url 'conthermo' %}">ConThermo</a></li>
+                                        <li><a href="{% url 'conthermo' %}">CONTHERMO</a></li>
                                         <li><a href="{% url 'raumasterpaper' %}">RAUMASTER PAPER</a></li>
                                     </ul>
                                 </li>
@@ -84,11 +86,11 @@
                                     <ul class="dropright-menu right-menu">
                                         <li><a href="{% url 'breitenfeldsteel' %}">BREITENFELD STEEL</a></li>
                                         <li><a href="{% url 'fundicaomorandini' %}">FUNDIÇÃO MORANDINI</a></li>
-                                        <li><a href="{% url 'lordsteel' %}">LORD STEEL INTERNATIONAL Co.Ltd."</a></li>
-                                        <li><a href="{% url 'maronsteel' %}">MARON STEEL"</a></li>
-                                        <li><a href="{% url 'schlick' %}">SCHLICK"</a></li>
-                                        <li><a href="{% url 'schmidtclemens' %}">SCHMIDT + CLEMENS"</a></li>
-                                        <li><a href="{% url 'siepmannwerke' %}">SIEPMANN WERKE"</a></li>
+                                        <li><a href="{% url 'lordsteel' %}">LORD STEEL INTERNATIONAL Co.Ltd.</a></li>
+                                        <li><a href="{% url 'maronsteel' %}">MARON STEEL</a></li>
+                                        <li><a href="{% url 'schlick' %}">SCHLICK</a></li>
+                                        <li><a href="{% url 'schmidtclemens' %}">SCHMIDT + CLEMENS</a></li>
+                                        <li><a href="{% url 'siepmannwerke' %}">SIEPMANN WERKE</a></li>
                                     </ul>
                                 </li>
                                 <li class="dropright">
@@ -131,7 +133,7 @@
                                         <li><a href="{% url 'bhdt' %}">BHDT</a></li>
                                         <li><a href="{% url 'breitenfeldsteel' %}">BREITENFELD STEEL</a></li>
                                         <li><a href="{% url 'christofgroup' %}">CHRISTOF GROUP</a></li>
-                                        <li><a href="{% url 'conthermo' %}">CON THERMO</a></li>
+                                        <li><a href="{% url 'conthermo' %}">CONTHERMO</a></li>
                                         <li><a href="{% url 'fundicaomorandini' %}">FUNDIÇÃO MORANDINI</a></li>
                                         <li><a href="{% url 'gigkarasek' %}">GIG KARASEK</a></li>
                                         <li><a href="{% url 'gmp' %}">GMP</a></li>
@@ -163,10 +165,10 @@
                             <i class="fa-solid fa-xmark" id="x-closed"></i>
                         </div>
 
-                        <li><a href="">Institucional</a></li>
-                        <li><a href="">Setores e Empresas</a></li>
-                        <li><a href="">Catálogos</a></li>
-                        <li><a href="">Contato</a></li>
+                        <li><a href="{% url 'index' %}">Institucional</a></li>
+                        <li><a href="{% url 'empresas' %}">Setores e Empresas</a></li>
+                        <li><a href="{% url 'catalogos' %}">Catálogos</a></li>
+                        <li><a href="#footer">Contato</a></li>
                     </ul>
 
                 </div>
