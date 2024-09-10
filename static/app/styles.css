@@ -415,6 +415,11 @@ main {
     /* border: 2px solid blueviolet; */
 }
 
+#sobreapgutt {
+  /* border: 2px solid red; */
+  scroll-margin-top: 200px;
+}
+
 .text-container {
     /* display: flex; */
     width: 100%;
@@ -468,6 +473,10 @@ main {
 .icon-cards-container {
     /* border: 2px solid red; */
     padding: 5rem 0;
+}
+
+#diretrizesancor {
+  scroll-margin-top: 100px;
 }
 
 .diretrizes-text-container {
@@ -531,6 +540,10 @@ main {
     padding-bottom: 18rem;
     width: 100%;
     height: 100vh;
+}
+
+#equipe {
+  scroll-margin-top: 100px;
 }
 
 .equipe-text-container {
@@ -955,7 +968,9 @@ tbody tr:nth-last-of-type(odd) {
 }
 
 .pop-up-download {
-  background-color: rgb(255, 255, 255);
+  background-color: #f8f8ec;
+  /* background-color: #182C37; */
+  color: var(--laranjinha);
   position: fixed;
   /* display: none; */
   visibility: hidden;
@@ -972,7 +987,7 @@ tbody tr:nth-last-of-type(odd) {
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.108);
   transition: opacity .3s ease-in-out;
   h1 {
-    color: #182C37;
+    /* color: #182C37; */
     font-size: 35px;
   }
   form {
@@ -983,7 +998,7 @@ tbody tr:nth-last-of-type(odd) {
   }
   label {
     display: block;
-    color: var(--p_gray);
+    color: var(--laranjinha);
     text-indent: 0.5rem;
   }
 }
@@ -1050,6 +1065,7 @@ textarea {
   margin-top: 0;
   margin-bottom: 1rem;
   border: 1.5px solid #182C37;
+  /* border: 1.5px solid var(--laranjinha); */
   color: #182C37;
 }
 
@@ -1081,6 +1097,7 @@ button[type="submit"] {
   cursor: pointer;
   width: 300px;
   background: #182C37;
+  /* background: var(--laranjinha); */
   line-height: 2em;
   color: white;
   border-radius: 10px;
@@ -1891,8 +1908,31 @@ button[type="submit"] {
   }
 
   .pop-up-download {
-    width: 90%;
-    padding: 1.7rem;
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+
+    h1 {
+      font-size: 33px;
+    }
+  }
+
+  .icon-popup {
+    #closepopup {
+      top: 45px;
+      right: 15px;
+    }
+  }
+
+  input[type="text"], 
+  textarea {
+    width: 300px;
+    margin-bottom: 10px;
+  }
+
+  button[type="submit"] {
+    position: relative;
+    /* border: 2px solid red; */
   }
 
   .company-page-div {

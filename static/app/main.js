@@ -62,21 +62,22 @@ window.onload = function () {
 // Popup on catalogos page ------------------------------------------------------------------------------------------------------------------------------------------------------
 
 document.addEventListener('DOMContentLoaded', function() {
-const overlay = document.querySelector("#overlay"),
+  const overlay = document.querySelector("#overlay"),
       popupscreen = document.querySelector(".pop-up-download"),
       xbutton = document.querySelector("#closepopup"),
       popup = document.querySelector(".popup");
+      // popup = document.getElementsByClassName("popup");
 
 // Ensure both elements are found
 if (popupscreen && popup) {
   // Add event listener to the popup element
-  popup.addEventListener("click", function() {
+  document.querySelectorAll('.popup').forEach(el => el.addEventListener('click', function() {
     popupscreen.classList.add("openpopup");
     overlay.classList.add("openpopup");
     // $('body').toggleClass('hiddenOverflow');
     $("body").css("overflow", "hidden");
     console.log("Popup opened");
-  });
+  }));
 } 
 
 if (xbutton) {
@@ -88,3 +89,5 @@ if (xbutton) {
   });
 }
 });
+
+// ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

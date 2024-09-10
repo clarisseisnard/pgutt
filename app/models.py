@@ -12,4 +12,4 @@ class Info(models.Model):
     data = models.DateTimeField(default=datetime.now())
 
     def __str__(self):
-        return "Empresa representada: " + self.empresa
+        return "" + self.contato_email + self.nome
