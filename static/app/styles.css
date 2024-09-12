@@ -1164,7 +1164,7 @@ button[type="submit"] {
   }
 
   .navbar {
-    height: 12vh;
+    height: 16vh;
   }
 
   .nav-items {
@@ -1324,7 +1324,8 @@ button[type="submit"] {
 
     .catalogos-page {
       /* border: 2px solid blue; */
-      padding: 3rem 0;
+      padding: 2rem 0;
+      min-height: unset;
     }
 
     .catalogos-text-container {
@@ -1338,9 +1339,18 @@ button[type="submit"] {
     }
 
     .pop-up-download {
-      padding: 3rem;
+      padding: 2rem 4rem;
       width: 70%;
-      height: 80%;
+      height: 85%;
+      h1 {
+        /* border: 2px solid red; */
+        margin: 0;
+      }
+    }
+
+    input[type="text"],
+    textarea {
+      margin: 0;
     }
   
 }
