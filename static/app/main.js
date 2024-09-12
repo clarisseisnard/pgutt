@@ -61,16 +61,15 @@ window.onload = function () {
 
 // Popup on catalogos page ------------------------------------------------------------------------------------------------------------------------------------------------------
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function(e) {
   const overlay = document.querySelector("#overlay"),
       popupscreen = document.querySelector(".pop-up-download"),
       xbutton = document.querySelector("#closepopup"),
       popup = document.querySelector(".popup");
       // popup = document.getElementsByClassName("popup");
+      e.preventDefault();
 
-// Ensure both elements are found
 if (popupscreen && popup) {
-  // Add event listener to the popup element
   document.querySelectorAll('.popup').forEach(el => el.addEventListener('click', function() {
     popupscreen.classList.add("openpopup");
     overlay.classList.add("openpopup");
@@ -98,9 +97,36 @@ document.addEventListener('DOMContentLoaded', function() {
   })
 });
 
-// ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// Download after valid form ----------------------------------------------------------------------------------------------------------------------------------------------------
 
 document.addEventListener('DOMContentLoaded', function () {
-  const downloadButton = document.querySelector("#downloadpdf")
-  const formButton = document.querySelector("#submit-form")
-})
+  const download1 = document.querySelector("#download-1");
+  const form = document.querySelector("#catalogoForm");
+  const submitButton = document.querySelector("#sendButton");
+
+  // Listen for the form submission
+  form.addEventListener("submit", function (e) {
+    e.preventDefault(); 
+
+    if (form.checkValidity()) {
+      form.submit();
+      triggerDownload();
+    }
+  });
+
+  download1.addEventListener("click", function (e) {
+    e.preventDefault(); 
+  });
+
+  function triggerDownload() {
+    const element = document.createElement("a");
+    element.href = "./mudinhas.jpg";
+    element.download = "formulário.jpg"; 
+
+    document.body.appendChild(element);
+
+    element.click();
+
+    document.body.removeChild(element);
+  }
+});

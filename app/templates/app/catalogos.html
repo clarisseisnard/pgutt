@@ -13,26 +13,27 @@
             <table>
                 <thead>
                     <tr>
-                        <th>Empresa/Título</th>
-                        <th>Formato/Tamanho</th>
-                        <th></th>
+                        <th>Título</th>
+                        <th>Formato</th>
+                        <th>Ação</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>BFT-High-Pressure-Pumps-Chemical-Application-EN</td>
                         <td>PDF</td>
-                        <td class="popup"><i class="fa-solid fa-circle-arrow-down" style="margin-right: 10px;"></i>Download</td>
+                        <!-- <td class="popup" id="download-1"><i class="fa-solid fa-circle-arrow-down" style="margin-right: 10px;"></i>Download</td> -->
+                         <td><a href="#" class="popup" id="download-1" download><i class="fa-solid fa-circle-arrow-down" style="margin-right: 10px;"></i>Download</a></td>
                     </tr>
                     <tr>
                         <td>RMP-Company_2024</td>
                         <td>PDF</td>
-                        <td class="popup"><i class="fa-solid fa-circle-arrow-down" style="margin-right: 10px;"></i>Download</td>
+                        <td class="popup" id="download-2"><i class="fa-solid fa-circle-arrow-down" style="margin-right: 10px;"></i>Download</td>
                     </tr>
                     <tr>
                         <td>abababbb</td>
                         <td>PDF</td>
-                        <td class="popup"><i class="fa-solid fa-circle-arrow-down" style="margin-right: 10px;"></i>Download</td>
+                        <td class="popup" id="download-3"><i class="fa-solid fa-circle-arrow-down" style="margin-right: 10px;"></i>Download</td>
                     </tr>
                 </tbody>
             </table>
@@ -44,7 +45,7 @@
                     <h1 id="download-h1text">Preencha os dados</h1>
                 </div>
                 <div>
-                    <form method="POST" class="download-form" action="{% url 'catalogos' %}">
+                    <form method="POST" class="download-form" action="{% url 'catalogos' %}" id="catalogoForm">
                         {% csrf_token %}
                         <div>
                             <label for="nome">Nome completo</label>
@@ -65,7 +66,7 @@
                             <label for="motivo">Motivo do contato</label>
                             <textarea name="motivo" id="motivoForm" style="resize: none;" required></textarea>
                         </div>
-                         <button type="submit">Enviar</button>
+                         <button type="submit" id="sendButton">Enviar</button>
                     </form>
                 </div>
                 <div class="icon-popup">

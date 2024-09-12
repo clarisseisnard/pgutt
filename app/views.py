@@ -20,7 +20,7 @@ def catalogos(request):
 
         update_info = Info(nome=nome, contato_email=email, contato_celular=celular, empresa=empresa, produto_de_interesse=produto, motivo=motivo)
         update_info.save()
-        return render(request, "app/index.html")
+        return render(request, "app/catalogos.html")
     if request.method == "GET":
         return render(request, "app/catalogos.html")
 
