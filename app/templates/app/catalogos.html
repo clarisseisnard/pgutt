@@ -2,20 +2,20 @@
 {% load static %}
 
 {% block main %}
-    <section style="margin-top: 8rem; height: auto;" class="catalogos-page">
+    <section style="margin-top: 8rem; height: auto; min-height: 70vh;" class="catalogos-page">
         <div class="catalogos-text-container">
             <h1>Catálogos</h1>
-            <p>Preencha os campos do formulário para baixar catálogo.</p>
-            <p>Após preenchimento, será redirecionado para download.<br>Seus dados estão protegidos.</p>
+            <p>Clique no catálogo desejado e preencha os campos do formulário para baixar o arquivo.</p>
+            <p><br></p>
         </div>
         
         <div class="table-container">
             <table>
                 <thead>
                     <tr>
-                        <th>Título</th>
-                        <th>Formato</th>
-                        <th>Documento</th>
+                        <th>Empresa/Título</th>
+                        <th>Formato/Tamanho</th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -65,8 +65,10 @@
                             <label for="motivo">Motivo do contato</label>
                             <textarea name="motivo" id="motivoForm" style="resize: none;" required></textarea>
                         </div>
-                        <button type="submit">Enviar</button>
+                        <!-- <input type="submit" id="submit-form" value="submit" hidden/>  -->
+                         <button type="submit">Enviar</button>
                     </form>
+                    <!-- <button id="downloadpdf" type="button">Enviar</button> -->
                 </div>
                 <div class="icon-popup">
                     <i class="fa-solid fa-xmark fa-2x" id="closepopup"></i>

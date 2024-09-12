@@ -90,4 +90,17 @@ if (xbutton) {
 }
 });
 
+// Removing # from url ----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+document.addEventListener('DOMContentLoaded', function() {
+  $(window).on('hashchange', function(e){
+    history.replaceState ("", document.title, e.originalEvent.oldURL);
+  })
+});
+
 // ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+document.addEventListener('DOMContentLoaded', function () {
+  const downloadButton = document.querySelector("#downloadpdf")
+  const formButton = document.querySelector("#submit-form")
+})

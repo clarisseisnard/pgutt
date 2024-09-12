@@ -1091,6 +1091,25 @@ textarea {
   }
 }
 
+button[type="button"] {
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  width: 300px;
+  background: #182C37;
+  /* background: var(--laranjinha); */
+  line-height: 2em;
+  color: white;
+  border-radius: 10px;
+  padding: 0.5rem;
+  font-size: 14px;
+  transition: all 1s ease;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
 button[type="submit"] {
   -webkit-appearance: none;
   appearance: none;
@@ -1142,6 +1161,10 @@ button[type="submit"] {
     width: fit-content;
     float: left;
     padding-left: 150px;
+  }
+
+  .navbar {
+    height: 12vh;
   }
 
   .nav-items {
@@ -1299,6 +1322,11 @@ button[type="submit"] {
       padding-bottom: 50px;
     }
 
+    .catalogos-page {
+      /* border: 2px solid blue; */
+      padding: 3rem 0;
+    }
+
     .catalogos-text-container {
       /* border: 2px solid red; */
       width: 55%;
@@ -1311,8 +1339,8 @@ button[type="submit"] {
 
     .pop-up-download {
       padding: 3rem;
-      width: 50%;
-      height: 60%;
+      width: 70%;
+      height: 80%;
     }
   
 }

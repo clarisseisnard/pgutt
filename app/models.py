@@ -12,4 +12,4 @@ class Info(models.Model):
     data = models.DateTimeField(default=datetime.now())
 
     def __str__(self):
-        return "" + self.contato_email + self.nome
+        return "Email: " + self.contato_email + " | Nome: " + self.nome
