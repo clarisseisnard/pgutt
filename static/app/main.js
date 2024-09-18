@@ -101,32 +101,81 @@ document.addEventListener('DOMContentLoaded', function() {
 
 document.addEventListener('DOMContentLoaded', function () {
   const download1 = document.querySelector("#download-1");
+  const download2 = document.querySelector("#download-2");
+  const download3 = document.querySelector("#download-3");
+  const download4 = document.querySelector("#download-4");
+
   const form = document.querySelector("#catalogoForm");
   const submitButton = document.querySelector("#sendButton");
 
-  // Listen for the form submission
+  let downloadFlag = null;
+
+  download1.addEventListener("click", function (e) {
+    e.preventDefault();
+    downloadFlag = 'download1';
+  });
+
+  download2.addEventListener("click", function(e) {
+    e.preventDefault();
+    downloadFlag = 'download2';
+  })
+
+  download3.addEventListener("click", function(e) {
+    e.preventDefault();
+    downloadFlag = 'download3';
+  })
+
+  download4.addEventListener("click", function(e) {
+    e.preventDefault();
+  })
+
   form.addEventListener("submit", function (e) {
     e.preventDefault(); 
 
     if (form.checkValidity()) {
       form.submit();
-      triggerDownload();
+
+      switch(downloadFlag) {
+        case 'download1':
+          triggerDownload();
+          break;
+        case 'download2':
+          triggerDownload2();
+        case 'download3':
+          triggerDownload3();
+        default:
+          break;
+      }
     }
   });
 
-  download1.addEventListener("click", function (e) {
-    e.preventDefault(); 
-  });
-
+  // ballestra pdf
   function triggerDownload() {
     const element = document.createElement("a");
-    element.href = "./mudinhas.jpg";
-    element.download = "formulário.jpg"; 
-
+    element.href = "/static/app/pdfs/Ballestra_DSSC_Chemicals.pdf";
+    element.download = "formulário.png"
     document.body.appendChild(element);
-
     element.click();
+    document.body.removeChild(element);
+  }
 
+  // bft high pressure 
+  function triggerDownload2() {
+    const element = document.createElement("a");
+    element.href = "/static/app/pdfs/BFT-High-Pressure-Pumps-Chemical-Application-EN.pdf";
+    element.download = "formulário.png"
+    document.body.appendChild(element);
+    element.click();
+    document.body.removeChild(element);
+  }
+
+   // rmp
+   function triggerDownload3() {
+    const element = document.createElement("a");
+    element.href = "/static/app/pdfs/RMP_Company_2024.pdf";
+    element.download = "formulário.png"
+    document.body.appendChild(element);
+    element.click();
     document.body.removeChild(element);
   }
 });

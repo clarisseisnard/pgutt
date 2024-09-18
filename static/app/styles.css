@@ -642,6 +642,54 @@ main {
 
 /* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
 
+footer {
+  position: relative;
+}
+
+.map {
+  /* background-color: rgba(206, 176, 176, 0.226); */
+  width: 100%;
+  height: 90vh;
+  z-index: 999;
+  position: absolute;
+
+  a {
+    /* display: none; */
+    font-family: 'Open Sans';
+    opacity: 0;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    transition: all 0.25s ease-in-out;
+    padding: 1rem;
+    font-size: 16px;
+  }
+
+  a:hover {
+    opacity: 1;
+  }
+
+  #empresa1 {
+    position: absolute;
+    top: 550px;
+    left: 850px;
+    /* background-color: #713509; */
+  }
+
+  #empresa2 {
+    position: absolute;
+    top: 400px;
+    right: 500px;
+  }
+
+  #empresa3 {
+    position: absolute;
+  }
+
+  #empresa4 {
+    position: absolute;
+  }
+}
+
 .footer-container {
     position: sticky;
     width: 100%;
@@ -954,14 +1002,16 @@ main {
 
 table  {
   background-color: transparent;
-  margin-bottom: 1rem;
   width: 100%;
+  border-spacing: 0.5rem;
 }
 
 table th,
 table td {
   padding: 0.7rem;
   border-radius: 8px;
+  /* border: 2px solid red; */
+  gap: 2rem;
 }
 
 td a {
@@ -969,8 +1019,9 @@ td a {
   color: var(--laranjinha);
 }
 
-tbody tr:nth-last-of-type(odd) {
+tbody {
   background-color: #f1edd1;
+  margin-bottom: 2rem !important;
 }
 
 .pop-up-download {
@@ -1167,6 +1218,10 @@ button[type="submit"] {
 }
 
 @media screen and (max-width: 1700px) {
+
+  .map {
+    display: none;
+  }
 
   .logo-container {
     position: static;
@@ -1379,6 +1434,10 @@ button[type="submit"] {
 }
 
 @media screen and (max-width: 991px) {
+
+  .map {
+    display: none;
+  }
     .logo-container {
         width: fit-content;
         position: static;
@@ -1569,6 +1628,10 @@ button[type="submit"] {
 }
 
 @media screen and (max-width: 800px) {
+
+  .map {
+    display: none;
+  }
    /* html {
     overflow: auto;
   }
