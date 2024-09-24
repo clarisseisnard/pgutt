@@ -100,33 +100,112 @@ document.addEventListener('DOMContentLoaded', function() {
 // Download after valid form ----------------------------------------------------------------------------------------------------------------------------------------------------
 
 document.addEventListener('DOMContentLoaded', function () {
-  const download1 = document.querySelector("#download-1");
-  const download2 = document.querySelector("#download-2");
-  const download3 = document.querySelector("#download-3");
-  const download4 = document.querySelector("#download-4");
+  const downloadBallestra = document.querySelector("#download-ballestra");
+  const downloadBft1 = document.querySelector("#download-bft-1");
+  const downloadBft2 = document.querySelector("#download-bft-2");
+  const downloadBft3 = document.querySelector("#download-bft-3");
+  const downloadBowers = document.querySelector("#download-bowers");
+  const downloadBreitenfeld = document.querySelector("#download-breitenfeld");
+  const downloadGigkarasek = document.querySelector("#download-gigkarasek");
+  const downloadGmp = document.querySelector("#download-gmp");
+  const downloadLordsteel = document.querySelector("#download-lordsteel");
+  const downloadMorandini = document.querySelector("#download-morandini");
+  const downloadRmp = document.querySelector("#download-rmp");
+  const downloadSbn = document.querySelector("#download-sbn");
+  const downloadSchlick = document.querySelector("#download-schlick");
+  const downloadSchmidtClemmens = document.querySelector("#download-schmidtclemens")
+  const downloadSonnek = document.querySelector("#download-sonnek")
+  const downloadTermomeccanica = document.querySelector("#download-termomeccanica")
+  const downloadUreaKnowHow = document.querySelector("#download-ureaknowhow")
 
   const form = document.querySelector("#catalogoForm");
   const submitButton = document.querySelector("#sendButton");
 
   let downloadFlag = null;
 
-  download1.addEventListener("click", function (e) {
+  downloadBallestra.addEventListener("click", function (e) {
     e.preventDefault();
-    downloadFlag = 'download1';
+    downloadFlag = 'ballestra';
   });
 
-  download2.addEventListener("click", function(e) {
+  downloadBft1.addEventListener("click", function(e) {
     e.preventDefault();
-    downloadFlag = 'download2';
+    downloadFlag = 'bft-1';
   })
 
-  download3.addEventListener("click", function(e) {
+  downloadBft2.addEventListener("click", function(e) {
     e.preventDefault();
-    downloadFlag = 'download3';
+    downloadFlag = 'bft-2';
   })
 
-  download4.addEventListener("click", function(e) {
+  downloadBft3.addEventListener("click", function(e) {
     e.preventDefault();
+    downloadFlag = 'bft-3';
+  })
+
+  downloadBowers.addEventListener("click", function(e) {
+    e.preventDefault();
+    downloadFlag = 'bowers'
+  })
+
+  downloadBreitenfeld.addEventListener("click", function(e) {
+    e.preventDefault();
+    downloadFlag = 'breitenfeld'
+  })
+
+  downloadGigkarasek.addEventListener("click", function(e) {
+    e.preventDefault();
+    downloadFlag = 'gigkarasek'
+  })
+
+  downloadGmp.addEventListener("click", function(e) {
+    e.preventDefault();
+    downloadFlag = 'gmp'
+  })
+
+  downloadLordsteel.addEventListener("click", function(e) {
+    e.preventDefault();
+    downloadFlag = 'lordsteel'
+  })
+
+  downloadMorandini.addEventListener("click", function(e) {
+    e.preventDefault();
+    downloadFlag = 'morandini'
+  })
+
+  downloadRmp.addEventListener("click", function(e) {
+    e.preventDefault();
+    downloadFlag = 'rmp'
+  })
+
+  downloadSbn.addEventListener("click", function(e) {
+    e.preventDefault();
+    downloadFlag = 'sbn'
+  })
+
+  downloadSchlick.addEventListener("click", function(e) {
+    e.preventDefault();
+    downloadFlag = 'schlick'
+  })
+
+  downloadSchmidtClemmens.addEventListener("click", function(e) {
+    e.preventDefault();
+    downloadFlag = 'schmidtclemmens'
+  })
+
+  downloadSonnek.addEventListener("click", function(e) {
+    e.preventDefault();
+    downloadFlag = 'sonnek'
+  })
+
+  downloadTermomeccanica.addEventListener("click", function(e) {
+    e.preventDefault();
+    downloadFlag = 'termomeccanica'
+  })
+
+  downloadUreaKnowHow.addEventListener("click", function(e) {
+    e.preventDefault();
+    downloadFlag = 'ureaknowhow'
   })
 
   form.addEventListener("submit", function (e) {
@@ -136,13 +215,41 @@ document.addEventListener('DOMContentLoaded', function () {
       form.submit();
 
       switch(downloadFlag) {
-        case 'download1':
-          triggerDownload();
+        case 'ballestra':
+          triggerBallestraDownload();
           break;
-        case 'download2':
-          triggerDownload2();
-        case 'download3':
-          triggerDownload3();
+        case 'bft-1':
+          triggerBftDownload1();
+        case 'bft-2':
+          triggerBftDownload2();
+        case 'bft-3':
+          triggerBftDownload3();
+        case 'bowers':
+          triggerBowersDownload();
+        case 'breitenfeld':
+          triggerBreitenfeld();
+        case 'gigkarasek':
+          triggerGigkarasek();
+        case 'gmp':
+          triggerGmp();
+        case 'lordsteel':
+          triggerLordsteel();
+        case 'morandini':
+          triggerMorandini();
+        case 'rmp':
+          triggerRmp();
+        case 'sbn':
+          triggerSbn();
+        case 'schlick':
+          triggerSchlick();
+        case 'schmidtclemmens':
+          triggerSchmidtClemmens();
+        case 'sonnek':
+          triggerSonnek();
+        case 'termomeccanica':
+          triggerTermomeccanica();
+        case 'ureaknowhow':
+          triggerUreaKnowHow();
         default:
           break;
       }
@@ -150,7 +257,7 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   // ballestra pdf
-  function triggerDownload() {
+  function triggerBallestraDownload() {
     const element = document.createElement("a");
     element.href = "/static/app/pdfs/Ballestra_DSSC_Chemicals.pdf";
     element.download = "formulário.png"
@@ -159,8 +266,18 @@ document.addEventListener('DOMContentLoaded', function () {
     document.body.removeChild(element);
   }
 
-  // bft high pressure 
-  function triggerDownload2() {
+  // bft ecotron
+  function triggerBftDownload1() {
+    const element = document.createElement("a");
+    element.href = "/static/app/pdfs/BFT-ECOTRON-EN-1.pdf";
+    element.download = "formulário.png"
+    document.body.appendChild(element);
+    element.click();
+    document.body.removeChild(element);
+  }
+
+   // bft high pressure 
+   function triggerBftDownload2() {
     const element = document.createElement("a");
     element.href = "/static/app/pdfs/BFT-High-Pressure-Pumps-Chemical-Application-EN.pdf";
     element.download = "formulário.png"
@@ -169,10 +286,150 @@ document.addEventListener('DOMContentLoaded', function () {
     document.body.removeChild(element);
   }
 
-   // rmp
-   function triggerDownload3() {
-    const element = document.createElement("a");
-    element.href = "/static/app/pdfs/RMP_Company_2024.pdf";
+  // bft servotron
+  function triggerBftDownload3() {
+    const element = document.createElement("a")
+    element.href = "/static/app/pdfs/BFT-SERVOTRON-EN-1.pdf"
+    element.download = "formulário.png"
+    document.body.appendChild(element);
+    element.click();
+    document.body.removeChild(element);
+  }
+
+  // bowers pdf
+  function triggerBowersDownload() {
+    const element = document.createElement("a")
+    element.href = "/static/app/pdfs/Bowers_ones.pdf"
+    element.download = "formulário.png"
+    document.body.appendChild(element);
+    element.click();
+    document.body.removeChild(element);
+  }
+
+  // breitenfeld pdf
+  function triggerBreitenfeld() {
+    const element = document.createElement("a")
+    element.href = "/static/app/pdfs/Company_Presentation_Breitenfeld_Steel_AG_2024_ENG.PDF"
+    element.download = "formulário.png"
+    document.body.appendChild(element);
+    element.click();
+    document.body.removeChild(element);
+  }
+
+  // conthermo pdf
+  function triggerConthermo() {
+    const element = document.createElement("a")
+    element.href = "/static/app/pdfs/Conthermo.pdf"
+    element.download = "formulário.png"
+    document.body.appendChild(element);
+    element.click();
+    document.body.removeChild(element);
+  }
+
+  // gigkarasek pdf
+  function triggerGigkarasek() {
+    const element = document.createElement("a")
+    element.href = "/static/app/pdfs/GIGKarasek-Portolio-English.pdf"
+    element.download = "formulário.png"
+    document.body.appendChild(element);
+    element.click();
+    document.body.removeChild(element);
+  }
+
+  // gmp pdf
+  function triggerGmp() {
+    const element = document.createElement("a")
+    element.href = "/static/app/pdfs/GMP.pdf"
+    element.download = "formulário.png"
+    document.body.appendChild(element);
+    element.click();
+    document.body.removeChild(element);
+  }
+
+  // lordsteel pdf
+  function triggerLordsteel() {
+    const element = document.createElement("a")
+    element.href = "/static/app/pdfs/Lord_steel.pdf"
+    element.download = "formulário.png"
+    document.body.appendChild(element);
+    element.click();
+    document.body.removeChild(element);
+  }
+
+  // morandini pdf
+  function triggerMorandini() {
+    const element = document.createElement("a")
+    element.href = "/static/app/pdfs/Morandini.pdf"
+    element.download = "formulário.png"
+    document.body.appendChild(element);
+    element.click();
+    document.body.removeChild(element);
+  }
+
+  // rmp pdf
+  function triggerRmp() {
+    const element = document.createElement("a")
+    element.href = "/static/app/pdfs/RMP_Company_2024.pdf"
+    element.download = "formulário.png"
+    document.body.appendChild(element);
+    element.click();
+    document.body.removeChild(element);
+  }
+
+  // sbn pdf
+  function triggerSbn() {
+    const element = document.createElement("a")
+    element.href = "/static/app/pdfs/SBN.pdf"
+    element.download = "formulário.png"
+    document.body.appendChild(element);
+    element.click();
+    document.body.removeChild(element);
+  }
+
+  // schlick pdf
+  function triggerSchlick() {
+    const element = document.createElement("a")
+    element.href = "static/app/pdfs/Schlick.pdf"
+    element.download = "formulário.png"
+    document.body.appendChild(element);
+    element.click();
+    document.body.removeChild(element);
+  }
+
+  // schmidt clemens pdf
+  function triggerSchmidtClemmens() {
+    const element = document.createElement("a")
+    element.href = "static/app/pdfs/Schmidt_Clemens.pdf"
+    element.download = "formulário.png"
+    document.body.appendChild(element);
+    element.click();
+    document.body.removeChild(element);
+  }
+
+  // sonnek pdf
+  function triggerSonnek() {
+    const element = document.createElement("a")
+    element.href = "static/app/pdfs/Sonnek.pdf"
+    element.download = "formulário.png"
+    document.body.appendChild(element);
+    element.click();
+    document.body.removeChild(element);
+  }
+
+  // termomeccanica pdf
+  function triggerTermomeccanica() {
+    const element = document.createElement("a")
+    element.href = "static/app/pdfs/Termomeccanica.pdf"
+    element.download = "formulário.png"
+    document.body.appendChild(element);
+    element.click();
+    document.body.removeChild(element);
+  }
+
+  // urea know how pdf
+  function triggerUreaKnowHow() {
+    const element = document.createElement("a")
+    element.href = "static/app/pdfs/UreaKnowHow.pdf"
     element.download = "formulário.png"
     document.body.appendChild(element);
     element.click();

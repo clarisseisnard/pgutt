@@ -660,7 +660,7 @@ footer {
     color: rgb(255, 255, 255);
     text-decoration: none;
     transition: all 0.25s ease-in-out;
-    padding: 1rem;
+    padding: 3rem 0 1rem 0;
     font-size: 16px;
   }
 
@@ -670,22 +670,65 @@ footer {
 
   #empresa1 {
     position: absolute;
-    top: 550px;
+    top: 520px;
     left: 850px;
     /* background-color: #713509; */
   }
 
   #empresa2 {
     position: absolute;
-    top: 400px;
-    right: 500px;
+    top: 370px;
+    right: 520px;
   }
 
   #empresa3 {
+    top: 240px;
+    right: 310px;
     position: absolute;
   }
 
   #empresa4 {
+    /* opacity: 1 !important; */
+    top: 210px;
+    right: 670px;
+    position: absolute;
+  }
+
+  #empresa5 {
+    /* opacity: 1 !important; */
+    /* background-color: rebeccapurple; */
+    top: 180px;
+    right: 680px;
+    position: absolute;
+  }
+
+  #empresa6 {
+    /* opacity: 1 !important; */
+    top: 270px;
+    right: 720px;
+    /* background-color: red; */
+    position: absolute;
+  }
+
+  #empresa7 {
+    /* opacity: 1 !important; */
+    top: 275px;
+    right: 590px;
+    position: absolute;
+  }
+
+  #empresa8 {
+    /* opacity: 1 !important; */
+    top: 235px;
+    right: 755px;
+    position: absolute;
+  }
+
+  #empresa9 {
+    /* opacity: 1 !important; */
+    top: 170px;
+    /* background-color: red; */
+    right: 730px;
     position: absolute;
   }
 }
