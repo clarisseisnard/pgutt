@@ -1262,8 +1262,26 @@ button[type="submit"] {
 
 @media screen and (max-width: 1700px) {
 
-  .map {
+  /* .map {
     display: none;
+  } */
+
+  #empresa1 {
+    top: 500px !important;
+    left: 520px !important;
+  }
+
+  #empresa2 {
+    /* opacity: 1 !important; */
+    left: 970px !important;
+  }
+
+  #empresa3 {
+    left: 200px !important;
+  }
+
+  #empresa4 {
+    left: 200px !important;
   }
 
   .logo-container {
@@ -1566,6 +1584,7 @@ button[type="submit"] {
 
       .subtext-img {
         width: 100%;
+        display: none;
         /* border: 5px solid red; */
         img {
           display:block; 
@@ -2134,6 +2153,7 @@ button[type="submit"] {
     /* border: 2px solid red; */
     margin: auto;
     width: fit-content;
+    border-spacing: unset;
   }
 
   table th,
