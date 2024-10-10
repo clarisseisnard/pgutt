@@ -1982,7 +1982,7 @@ button[type="submit"] {
 
   .footer-container {
     padding: 0;
-    background: url('./MundiMobile2.png');
+    background: url('./MundiMobile3.png');
     background-repeat: no-repeat;
     background-position: center;
     object-fit: cover;
@@ -2154,7 +2154,7 @@ button[type="submit"] {
     /* border: 2px solid red; */
     margin: auto;
     width: fit-content;
-    border-spacing: unset;
+    border-spacing: 4px;
   }
 
   table th,
