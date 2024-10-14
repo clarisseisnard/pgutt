@@ -80,3 +80,12 @@ def termomeccanica(request):
 
 def vana(request):
     return render(request, 'app/empresa/vana.html')
+
+def rkind(request):
+    return render(request, 'app/empresa/rkind.html')
+
+def bowerjones(request):
+    return render(request, 'app/empresa/bowerjones.html')
+
+def ureaknowhow(request):
+    return render(request, 'app/empresa/ureaknowhow.html')

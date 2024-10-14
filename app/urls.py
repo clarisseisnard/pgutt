@@ -24,4 +24,7 @@ urlpatterns = [
     path('siepmannwerke', views.siepmannwerke, name="siepmannwerke"),
     path('termomeccanica', views.termomeccanica, name="termomeccanica"),
     path('vana', views.vana, name="vana"),
+    path('rkind', views.rkind, name="rkind"),
+    path('bowerjones', views.bowerjones, name="bowerjones"),
+    path('ureknowhow', views.ureaknowhow, name="ureaknowhow"),
 ]
