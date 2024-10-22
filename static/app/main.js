@@ -260,7 +260,7 @@ document.addEventListener('DOMContentLoaded', function () {
   function triggerBallestraDownload() {
     const element = document.createElement("a");
     element.href = "/static/app/pdfs/Ballestra_DSSC_Chemicals.pdf";
-    element.download = "formulário.png"
+    element.download = ""
     document.body.appendChild(element);
     element.click();
     document.body.removeChild(element);
@@ -270,7 +270,7 @@ document.addEventListener('DOMContentLoaded', function () {
   function triggerBftDownload1() {
     const element = document.createElement("a");
     element.href = "/static/app/pdfs/BFT-ECOTRON-EN-1.pdf";
-    element.download = "formulário.png"
+    element.download = ""
     document.body.appendChild(element);
     element.click();
     document.body.removeChild(element);
@@ -280,7 +280,7 @@ document.addEventListener('DOMContentLoaded', function () {
    function triggerBftDownload2() {
     const element = document.createElement("a");
     element.href = "/static/app/pdfs/BFT-High-Pressure-Pumps-Chemical-Application-EN.pdf";
-    element.download = "formulário.png"
+    element.download = ""
     document.body.appendChild(element);
     element.click();
     document.body.removeChild(element);
@@ -290,7 +290,7 @@ document.addEventListener('DOMContentLoaded', function () {
   function triggerBftDownload3() {
     const element = document.createElement("a")
     element.href = "/static/app/pdfs/BFT-SERVOTRON-EN-1.pdf"
-    element.download = "formulário.png"
+    element.download = ""
     document.body.appendChild(element);
     element.click();
     document.body.removeChild(element);
@@ -300,7 +300,7 @@ document.addEventListener('DOMContentLoaded', function () {
   function triggerBowersDownload() {
     const element = document.createElement("a")
     element.href = "/static/app/pdfs/Bowers_ones.pdf"
-    element.download = "formulário.png"
+    element.download = ""
     document.body.appendChild(element);
     element.click();
     document.body.removeChild(element);
@@ -310,7 +310,7 @@ document.addEventListener('DOMContentLoaded', function () {
   function triggerBreitenfeld() {
     const element = document.createElement("a")
     element.href = "/static/app/pdfs/Company_Presentation_Breitenfeld_Steel_AG_2024_ENG.PDF"
-    element.download = "formulário.png"
+    element.download = ""
     document.body.appendChild(element);
     element.click();
     document.body.removeChild(element);
@@ -320,7 +320,7 @@ document.addEventListener('DOMContentLoaded', function () {
   function triggerConthermo() {
     const element = document.createElement("a")
     element.href = "/static/app/pdfs/Conthermo.pdf"
-    element.download = "formulário.png"
+    element.download = ""
     document.body.appendChild(element);
     element.click();
     document.body.removeChild(element);
@@ -330,7 +330,7 @@ document.addEventListener('DOMContentLoaded', function () {
   function triggerGigkarasek() {
     const element = document.createElement("a")
     element.href = "/static/app/pdfs/GIGKarasek-Portolio-English.pdf"
-    element.download = "formulário.png"
+    element.download = ""
     document.body.appendChild(element);
     element.click();
     document.body.removeChild(element);
@@ -340,7 +340,7 @@ document.addEventListener('DOMContentLoaded', function () {
   function triggerGmp() {
     const element = document.createElement("a")
     element.href = "/static/app/pdfs/GMP.pdf"
-    element.download = "formulário.png"
+    element.download = ""
     document.body.appendChild(element);
     element.click();
     document.body.removeChild(element);
@@ -350,7 +350,7 @@ document.addEventListener('DOMContentLoaded', function () {
   function triggerLordsteel() {
     const element = document.createElement("a")
     element.href = "/static/app/pdfs/Lord_steel.pdf"
-    element.download = "formulário.png"
+    element.download = ""
     document.body.appendChild(element);
     element.click();
     document.body.removeChild(element);
@@ -360,7 +360,7 @@ document.addEventListener('DOMContentLoaded', function () {
   function triggerMorandini() {
     const element = document.createElement("a")
     element.href = "/static/app/pdfs/Morandini.pdf"
-    element.download = "formulário.png"
+    element.download = ""
     document.body.appendChild(element);
     element.click();
     document.body.removeChild(element);
@@ -370,7 +370,7 @@ document.addEventListener('DOMContentLoaded', function () {
   function triggerRmp() {
     const element = document.createElement("a")
     element.href = "/static/app/pdfs/RMP_Company_2024.pdf"
-    element.download = "formulário.png"
+    element.download = ""
     document.body.appendChild(element);
     element.click();
     document.body.removeChild(element);
@@ -380,7 +380,7 @@ document.addEventListener('DOMContentLoaded', function () {
   function triggerSbn() {
     const element = document.createElement("a")
     element.href = "/static/app/pdfs/SBN.pdf"
-    element.download = "formulário.png"
+    element.download = ""
     document.body.appendChild(element);
     element.click();
     document.body.removeChild(element);
@@ -390,7 +390,7 @@ document.addEventListener('DOMContentLoaded', function () {
   function triggerSchlick() {
     const element = document.createElement("a")
     element.href = "static/app/pdfs/Schlick.pdf"
-    element.download = "formulário.png"
+    element.download = ""
     document.body.appendChild(element);
     element.click();
     document.body.removeChild(element);
@@ -400,7 +400,7 @@ document.addEventListener('DOMContentLoaded', function () {
   function triggerSchmidtClemmens() {
     const element = document.createElement("a")
     element.href = "static/app/pdfs/Schmidt_Clemens.pdf"
-    element.download = "formulário.png"
+    element.download = ""
     document.body.appendChild(element);
     element.click();
     document.body.removeChild(element);
@@ -410,7 +410,7 @@ document.addEventListener('DOMContentLoaded', function () {
   function triggerSonnek() {
     const element = document.createElement("a")
     element.href = "static/app/pdfs/Sonnek.pdf"
-    element.download = "formulário.png"
+    element.download = ""
     document.body.appendChild(element);
     element.click();
     document.body.removeChild(element);
@@ -420,7 +420,7 @@ document.addEventListener('DOMContentLoaded', function () {
   function triggerTermomeccanica() {
     const element = document.createElement("a")
     element.href = "static/app/pdfs/Termomeccanica.pdf"
-    element.download = "formulário.png"
+    element.download = ""
     document.body.appendChild(element);
     element.click();
     document.body.removeChild(element);
@@ -430,7 +430,7 @@ document.addEventListener('DOMContentLoaded', function () {
   function triggerUreaKnowHow() {
     const element = document.createElement("a")
     element.href = "static/app/pdfs/UreaKnowHow.pdf"
-    element.download = "formulário.png"
+    element.download = ""
     document.body.appendChild(element);
     element.click();
     document.body.removeChild(element);
