@@ -2181,3 +2181,20 @@ button[type="submit"] {
   }
 
 }
+
+@media screen and (max-width: 2200px),
+       screen and (max-height: 800px) {
+      .pop-up-download {
+        padding: 0 3rem;
+        h1 {
+          font-size: 33px;
+          margin: 0;
+        }
+
+        .subtext-img {
+          img {
+            display: none;
+          }
+        }
+      }
+}
