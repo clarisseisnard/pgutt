@@ -415,6 +415,7 @@ main {
 }
 
 .text-content {
+    position: relative;
     width: 100%;
     height: 70vh;
     padding: 5rem 0;
@@ -442,10 +443,11 @@ main {
 }
 
 .subtext-img {
+  position: relative;
   img {
     position: absolute;
-    left: 1000px;
-    top: 1055px;
+    left: 55%;
+    top: -50px;
     width: 300px;
     height: auto;
     border-radius: 20px;
@@ -1383,8 +1385,7 @@ button[type="submit"] {
         /* display: none; */
         position: absolute;
         width: 230px;
-        top: 80px;
-        left: 900px;
+        left: 60%;
         height: auto;
         border-radius: 20px;
       }
@@ -1512,6 +1513,14 @@ button[type="submit"] {
   
 }
 
+@media screen and (max-width: 1200px) {
+  .subtext-img {
+    img {
+      left: 70%;
+    }
+  }
+}
+
 @media screen and (max-width: 991px) {
 
   .map {
@@ -1601,14 +1610,13 @@ button[type="submit"] {
       }
 
       .subtext-img {
-        width: 100%;
+        /* width: 100%; */
         display: none;
         /* border: 5px solid red; */
         img {
           display:block; 
           width: 250px;
-          top: 1240px;
-          left: 550px;
+          left: 90%;
           height: auto;
           border-radius: 20px;
         }
@@ -2180,21 +2188,4 @@ button[type="submit"] {
     width: fit-content;
   }
 
-}
-
-@media screen and (max-width: 2200px),
-       screen and (max-height: 800px) {
-      .pop-up-download {
-        padding: 0 3rem;
-        h1 {
-          font-size: 33px;
-          margin: 0;
-        }
-
-        .subtext-img {
-          img {
-            display: none;
-          }
-        }
-      }
 }
