@@ -89,3 +89,9 @@ def bowerjones(request):
 
 def ureaknowhow(request):
     return render(request, 'app/empresa/ureaknowhow.html')
+
+def ketjurauma(request):
+    return render(request, "app/empresa/ketjurauma.html")
+
+def dekompte(request):
+    return render(request, 'app/empresa/dekompte.html')
