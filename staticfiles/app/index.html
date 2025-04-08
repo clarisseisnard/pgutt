@@ -1,0 +1,383 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+        <meta name="viewport" content="width=device-width, height=device-height">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer"/> 
+        <link rel="stylesheet" href="{% static 'app/styles.css'%}">
+        <link rel="icon" href="{% static 'app/ICONs.png' %}">
+        <script src="{% static 'app/main.js' %}"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+        <title>{% block title %}Pgutt{% endblock %}</title>
+    </head>
+
+    <body>
+       
+        <header class="header">
+            <nav class="navbar">
+
+                <div class="nav-container container">
+                    <div class="logo-container">
+                        <a href="{% url 'index' %}"><img id="logo" src="{% static 'app/logos/LOGO.png' %}"></a>
+                    </div>
+
+                    <div class="menu-icons">
+                        <i class="fa-solid fa-bars" id="bar-open"></i>
+                    </div>
+
+                    <ul class="nav-items">
+                        <li class="dropdown">
+                            <a id="menu-link">Institucional</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#sobreapgutt">Sobre a P. Gutt</a></li>
+                                <li><a href="#diretrizesancor">Diretrizes</a></li>                            
+                                <li><a href="#equipe">Equipe</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a id="menu-link">Setores e Empresas</a>
+                            <ul class="dropdown-menu larger-dropdown">
+                                <li class="dropright">
+                                    <a>Aços Especiais e Inoxidáveis</a>
+                                    <ul class="dropright-menu right-menu">
+                                        <li><a href="{% url 'breitenfeldsteel' %}">BREITENFELD STEEL</a></li>
+                                        <li><a href="{% url 'lordsteel' %}">LORD STEEL INTERNATIONAL Co.Ltd.</a></li>
+                                        <li><a href="{% url 'rkind' %}">R. KIND</a></li>
+                                        <li><a href="{% url 'schmidtclemens' %}">SCHMIDT + CLEMENS</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropright">
+                                    <a>Correntes Transportadoras</a>
+                                    <ul class="dropright-menu" style="width: 150px;">                                        
+                                        <li><a href="{% url 'ketjurauma' %}">KETJURAUMA OY</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropright">
+                                    <a>Equipamentos de Alta Pressão</a>
+                                    <ul class="dropright-menu" style="width: 150px;">
+                                        <li><a href="{% url 'bft' %}">BFT</a></li>
+                                        <li><a href="{% url 'bhdt' %}">BHDT</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropright">
+                                    <a>Equipamentos para Indústria de Papel e Celulose</a>
+                                    <ul class="dropright-menu" style="width: 200px;">
+                                        <li><a href="{% url 'gigkarasek' %}">GIG KARASEK</a></li>
+                                        <li><a href="{% url 'ketjurauma' %}">KETJURAUMA OY</a></li>
+                                        <li><a href="{% url 'raumasteroy' %}">RAUMASTER OY</a></li>
+                                        <li><a href="{% url 'raumasterpaper' %}">RAUMASTER PAPER</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropright">
+                                    <a>Equipamentos para Indústria Farmacêutica e de Alimentos</a>
+                                    <ul class="dropright-menu right-menu">
+                                        <li><a href="{% url 'schlick' %}">SCHLICK</a></li>
+                                        <li><a href="{% url 'vana' %}">VANA ANLAGENBAU GmbH & Co KG</a></li>
+
+                                    </ul>
+                                </li>
+                                <li class="dropright">
+                                    <a>Fornos</a>
+                                    <ul class="dropright-menu" style="width: 200px;">
+                                        <li><a href="{% url 'conthermo' %}">CONTHERMO</a></li>
+                                        
+                                    </ul>
+                                </li>
+                                <li class="dropright">
+                                    <a>Juntas de Expansão</a>
+                                    <ul class="dropright-menu" style="width: 200px;">
+                                        <li><a href="{% url 'dekompte' %}">DEKOMTE</a></li>
+                                        
+                                    </ul>
+                                </li>
+                                <li class="dropright">
+                                    <a>Metalurgia</a>
+                                    <ul class="dropright-menu right-menu">
+                                        <li><a href="{% url 'breitenfeldsteel' %}">BREITENFELD STEEL</a></li>
+                                        <li><a href="{% url 'fundicaomorandini' %}">FUNDIÇÃO MORANDINI</a></li>
+                                        <li><a href="{% url 'lordsteel' %}">LORD STEEL INTERNATIONAL Co.Ltd.</a></li>
+                                        <li><a href="{% url 'maronsteel' %}">MARON STEEL</a></li>
+                                        <li><a href="{% url 'schlick' %}">SCHLICK</a></li>
+                                        <li><a href="{% url 'schmidtclemens' %}">SCHMIDT + CLEMENS</a></li>
+                                        <li><a href="{% url 'siepmannwerke' %}">SIEPMANN WERKE</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropright">
+                                <a>Petróleo e Gás</a>
+                                <ul class="dropright-menu right-menu" style="width: 200px;">
+                                    <li><a href="{% url 'christofgroup' %}">CHRISTOF GROUP SBN</a></li>
+                                    <li><a href="{% url 'dekompte' %}">DEKOMTE</a></li>
+                                    <li><a href="{% url 'gigkarasek' %}">GIG KARASEK</a></li>
+                                    <li><a href="{% url 'rkind' %}">R. KIND</a></li>
+                                    <li><a href="{% url 'termomeccanica' %}">TERMOMECCÂNICA S.p.A.</a></li>
+                                </ul>
+                                <li class="dropright">
+                                    <a href="">Portas e Painéis para Salas Limpas</a>
+                                    <ul class="dropright-menu" style="width: 100px;">
+                                        <li><a href="{% url 'gmp' %}">GMP</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropright">
+                                    <a>Produtos Químicos</a>
+                                    <ul class="dropright-menu right-menu" style="width: 200px;">
+                                        <li><a href="{% url 'ballestra' %}">BALLESTRA</a></li>
+                                        <li><a href="{% url 'gigkarasek' %}">GIG KARASEK</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropright">
+                                    <a>Tecnologias Ambientais</a>
+                                    <ul class="dropright-menu right-menu" style="width: 200px;">
+                                        <li><a href="{% url 'gigkarasek' %}">GIG KARASEK</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropright">
+                                    <a>Termoelétricas</a>
+                                    <ul class="dropright-menu right-menu" style="width: 200px;">
+                                        <li><a href="{% url 'dekompte' %}">DEKOMTE</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropright">
+                                    <a>Tubos e Conexões</a>
+                                    <ul class="dropright-menu right-menu">
+                                        <li><a href="{% url 'lordsteel' %}">LORD STEEL INTERNATIONAL Co.Ltd.</a></li>
+                                        <li><a href="{% url 'maronsteel' %}">MARON STEEL</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropright">
+                                    <a href="{% url 'empresas' %}" id="todasasempresas">Todas as Empresas Representadas</a>
+                                    <ul class="dropright-menu right-menu" style="display: none;">
+                                        <li><a href="{% url 'ballestra' %}">BALLESTRA</a></li>
+                                        <li><a href="{% url 'bft' %}">BFT</a></li>
+                                        <li><a href="{% url 'bhdt' %}">BHDT</a></li>
+                                        <li><a href="{% url 'breitenfeldsteel' %}">BREITENFELD STEEL</a></li>
+                                        <li><a href="{% url 'christofgroup' %}">CHRISTOF GROUP SBN</a></li>
+                                        <li><a href="{% url 'conthermo' %}">CON THERMO</a></li>
+                                        <li><a href="{% url 'dekompte' %}">DEKOMTE</a></li>
+                                        <li><a href="{% url 'fundicaomorandini' %}">FUNDIÇÃO MORANDINI</a></li>
+                                        <li><a href="{% url 'gigkarasek' %}">GIG KARASEK</a></li>
+                                        <li><a href="{% url 'gmp' %}">GMP</a></li>
+                                        <li><a href="{% url 'ketjurauma' %}">KETJURAUMA OY</a></li>
+                                        <li><a href="{% url 'lordsteel' %}">LORD STEEL INTERNATIONAL Co.Ltd.</a></li>
+                                        <li><a href="{% url 'maronsteel' %}">MARON STEEL</a></li>
+                                        <li><a href="{% url 'raumasteroy' %}">RAUMASTER OY</a></li>
+                                        <li><a href="{% url 'raumasterpaper' %}">RAUMASTER PAPER</a></li>
+                                        <li><a href="{% url 'schlick' %}">SCHLICK</a></li>
+                                        <li><a href="{% url 'schmidtclemens' %}">SCHMIDT + CLEMENS</a></li>
+                                        <li><a href="{% url 'siepmannwerke' %}">SIEPMANN WERKE</a></li>
+                                        <li><a href="{% url 'termomeccanica' %}">TERMOMECCÂNICA S.p.A.</a></li>
+                                        <li><a href="{% url 'vana' %}">VANA ANLAGENBAU GmbH & Co KG</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a id="menu-link" href="{% url 'catalogos' %}">Catálogos</a></li>
+                        <li><a id="menu-link" href="#footer">Contato</a></li>
+
+                        <div class="languageswitcher-container">
+                            <li class="dropdown-language">
+                                <a class="flag-link"><img class="flag-icon" id="brasilflag" src="{% static 'app/brasilflag.png' %}"></a>
+                            </li>
+                        </div>
+                    </ul>
+
+                    <ul class="responsive-nav-items">
+                        <div class="menu-icons">
+                            <i class="fa-solid fa-xmark" id="x-closed"></i>
+                        </div>
+
+                        <li><a href="{% url 'index' %}">Institucional</a></li>
+                        <li><a href="{% url 'empresas' %}">Setores e Empresas</a></li>
+                        <li><a href="{% url 'catalogos' %}">Catálogos</a></li>
+                        <li><a href="#footer">Contato</a></li>
+                    </ul>
+
+                </div>
+            </nav>
+        </header>
+
+        <section>
+            <div class="inner-content">
+                <div class="background-container">
+                </div>
+
+                <div class="image-text-container">
+                    <h1 id="img-text">Facilitamos negócios entre a sua indústria e os melhores fornecedores internacionais</h1>
+                </div>
+
+                <div class="institucional-section">
+                    <div class="inst-section-text-container">
+                        <h1 id="header-institucional">Institucional</h1>
+                    </div>
+                </div>
+
+                <div class="text-content" id="sobreapgutt">
+                    <div class="text-container">
+                        <div class="main-h1-container">
+                            <h1 id="h1-1">Sobre a P. Gutt</h1>
+                        </div>
+
+                        <div class="">
+                            <div class="subtext-img">
+                                <img src="{% static 'app/mudinhas.jpg' %}" alt="">
+                            </div>
+                        </div>
+
+                        <div class="small-text-container">
+                            <h3 style="color: black;">Representações Comerciais Desde 1985</h3>
+                        
+                            <p>A P. Gutt Representações e Comércio de Equipamentos, Ltda. é uma organização dedicada à representação de empresas fabricantes de equipamentos e materiais projetados e fabricados no exterior.
+                            </p>
+                            <p>As empresas representadas pela P. Gutt fornecem equipamentos para as Indústrias Alimentícias, Rações, Farmacêutica, Cosméticos, Inseticidas, Fertilizantes NPK, Ceras, Óleos e Gorduras, Química, Química Orgânica, Petroquímica, Poliuretano, Adesivos, Policarbonatos, Produtores de Fibra de Liocel, Celulose, Papel, Baterias de Ácido e Lítio, Bio Diesel, Refinaria, Bio Refinarias, Fibras Acrílicas Ocas, Processadores de Milho, Trigo, Amido, Batata, Tapioca, Ervilha e Feijão, Utilizadores de vapor como fonte de energia, Metalurgia, Siderurgia, Aços, Valorização do CO2, Cimenteiras, Alta Pressão, Corte por Água, Licor Negro, Licor Branco, Ácido Sulfúrico, Ácido Fosfórico, Detergentes, Sabão, Vidro, Calçado, Pedreiras, Mineração, entre outras.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="icon-cards-container" id="diretrizesancor">
+                    <div class="diretrizes-text-container">
+                        <h1 id="h1-1">Diretrizes</h1>
+                    </div>
+                    <div class="icon-cards-wrapper">
+                        <div class="icon-card">
+                            <div class="icon-icon-wrapper">
+                                <img src="{% static 'app/ICONs_1MISSION.png' %}">
+                            </div>
+                            <div class="text-card-wrapper">
+                                <h3>Missão</h3>
+                                <p>Oferecer aos nossos clientes excelência na prestação de nossos serviços, representando nossos parceiros e posicionando seus produtos em destaque no mercado.</p>
+                            </div>
+                        </div>
+                        <div class="icon-card">
+                            <div class="icon-icon-wrapper">
+                                <img src="{% static 'app/ICONs_2VISION.png' %}">
+                            </div>
+                            <div class="text-card-wrapper">
+                                <h3>Visão</h3>
+                                <p>Ser referência como empresa de representação e expansão comercial no mercado globalmente atuante.</p>
+                            </div>
+                        </div>
+                        <div class="icon-card">
+                            <div class="icon-icon-wrapper">
+                                <img src="{% static 'app/ICONs_3VALUE.png' %}">
+                            </div>
+                            <div class="text-card-wrapper">
+                                <h3>Valores</h3>
+                                <p>Ética, respeito, confiança, transparência, integridade, espírito de vitória, trabalho em equipe, inovação, diversidade com inclusão e profissionalismo.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="equipe-div-container" id="equipe">
+                    <div class="equipe-text-container">
+                        <h1 id="h1-1">Equipe</h1>
+                    </div>
+                    <div class="equipe-profile-wrapper">
+                        <div class="profile">
+                            <div class="profile-photo-wrapper">
+                                <img src="{% static 'app/Img_Paulo_Guttmann300.jpg' %}">
+                            </div>
+                            <h3>Paulo Guttmann</h3>
+                            <h5>FOUNDER &<br>MANAGING DIRECTOR</h5> 
+                            <div class="social-icon-wrapper">
+                                <img src="{% static 'app/ICON_WhatsApp2.png' %}" alt="" class="icon-socials">
+                                <p>WhatsApp +55 (21) 98112-9019</p> 
+                            </div>
+                            <div class="social-icon-wrapper">
+                                <img src="{% static 'app/ICON_Email3.png' %}" alt="" class="icon-socials">
+                                <a href="mailto:paulo.guttmann@pgutt.com.br">paulo.guttmann@pgutt.com.br</a>
+                            </div>
+                        </div>
+                        <div class="profile">
+                            <div class="profile-photo-wrapper">
+                                <img src="{% static 'app/Img_André_Guttmann300.jpg' %}">
+                            </div>
+                            <h3>André Guttmann</h3>
+                            <h5>CEO | COMMERCIAL REPRESENTATION</h5> 
+                            <div class="social-icon-wrapper">
+                                <img src="{% static 'app/ICON_WhatsApp2.png' %}" alt="" class="icon-socials">
+                                <p>WhatsApp +55 (21) 99915-8188</p> 
+                            </div>
+                            <div class="social-icon-wrapper">
+                                <img src="{% static 'app/ICON_Email3.png' %}" alt="" class="icon-socials">
+                                <a href="mailto:andre.guttmann@pgutt.com.br">andre.guttmann@pgutt.com.br</a>
+                            </div>
+                        </div>
+                        <div class="profile">
+                            <div class="profile-photo-wrapper">
+                                <img src="{% static 'app/Img_Paulo_Alegria300.jpg' %}">
+                            </div>
+                            <h3>Paulo Alegria</h3>
+                            <h5>KEY ACCOUNT MANAGER<br>FOR SOUTH AMERICA</h5> 
+                            <div class="social-icon-wrapper">
+                                <img src="{% static 'app/ICON_WhatsApp2.png' %}" alt="" class="icon-socials">
+                                <p>WhatsApp +55 (21) 96715-0911</p> 
+                            </div>
+                            <div class="social-icon-wrapper">
+                                <img src="{% static 'app/ICON_Email3.png' %}" alt="" class="icon-socials">
+                                <a href="mailto:paulo.alegria@pgutt.com.br">paulo.alegria@pgutt.com.br</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cards-slider">
+                    <div>
+                        
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <footer>
+            <div class="footer-container" id="footer">
+                <div class="contato-text-container">
+                    <h1 id="h1-1">Contato</h1>
+                </div>
+
+                <div class="footer-icons">
+                    <a><img src="{% static 'app/ICON_Address.png' %}" alt=""></a>
+                    <a><img src="{% static 'app/ICON_Phone.png' %}" alt=""></a>
+                    <a><img src="{% static 'app/ICON_Email.png' %}" alt=""></a>
+                    <a href="https://www.linkedin.com/company/pguttrepresentacoesltda/about/" target="_blank"><img src="{% static 'app/Icon-LinkedinB.png' %}" alt=""></a>
+                </div>
+
+                <br>
+                
+                <div class="info-container">
+                    <p>
+                        <b style="color: white; font-size: 20px;">                    
+                            P. Gutt Representações e Comércio de Equipamentos, Ltda.</b>
+                        <br>
+                       Endereço: Avenida Delfim Moreira, 1160, Sobrado - Várzea
+                        <br>
+                        CEP 25953-236 TERESÓPOLIS/RJ - BRASIL
+                        <br>
+                        Telefone: +55 (21) 2643-1727
+                        <br>
+                        <a href="mailto:pgutt@pgutt.com.br">Email: pgutt@pgutt.com.br</a>
+                        
+                    </p>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                </br>
+                </div>
+               
+                
+                <div class="copyright-text-container">
+                    <h2 id="copyright-text"> Copyright © 2024 - P. Gutt Representações e Comércio de Equipamentos, Ltda. Todos os direitos reservados.</h2>
+                </div>
+            </div>
+        </footer>
+
+    </body>
+</html>
