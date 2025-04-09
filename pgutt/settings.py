@@ -30,7 +30,7 @@ SECRET_KEY = 'django-insecure-^o=5qqsim5uc1hq0@2ghna5@#=6bw4l@xterh(dd)))&^#7$8(
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['pgutt.com.br', 'www.pgutt.com.br', 'https://pguttteste-4043dea630fb.herokuapp.com']
+ALLOWED_HOSTS = ['pgutt.com.br', 'www.pgutt.com.br', 'https://pguttteste-4043dea630fb.herokuapp.com', 'pguttteste-4043dea630fb.herokuapp.com']
 
 
 # Application definition
