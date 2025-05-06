@@ -32,7 +32,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['pgutt.com.br', 
                  'www.pgutt.com.br', 'https://pguttteste-4043dea630fb.herokuapp.com', 
-                 'pguttteste-4043dea630fb.herokuapp.com', 'pgutt.com', 'www.pgutt.com', '127.0.0.1']
+                 'pguttteste-4043dea630fb.herokuapp.com', 'pgutt.com', 'www.pgutt.com', '127.0.0.1', '.pgutt.com.br']
 
 
 # Application definition
