@@ -245,44 +245,64 @@ document.addEventListener('DOMContentLoaded', function () {
           break;
         case 'bft-1':
           triggerBftDownload1();
+          break;
         case 'bft-2':
           triggerBftDownload2();
+          break;
         case 'bft-3':
           triggerBftDownload3();
+          break;
         case 'bowers':
           triggerBowersDownload();
+          break;
         case 'breitenfeld':
           triggerBreitenfeld();
+          break;
         case 'gigkarasek':
           triggerGigkarasek();
+          break;
         case 'gmp':
           triggerGmp();
+          break;
         case 'lordsteel':
           triggerLordsteel();
+          break;
         case 'morandini':
           triggerMorandini();
+          break;
         case 'rmp':
           triggerRmp();
+          break;
         case 'sbn':
           triggerSbn();
+          break;
         case 'schlick':
           triggerSchlick();
+          break;
         case 'schmidtclemmens':
           triggerSchmidtClemmens();
+          break;
         case 'sonnek':
           triggerSonnek();
+          break;
         case 'termomeccanica':
           triggerTermomeccanica();
+          break;
         case 'ureaknowhow':
           triggerUreaKnowHow();
+          break;
         case 'dekomte-1':
           triggerDekomte1();
+          break;
         case 'dekomte-2':
           triggerDekomte2();
+          break;
         case 'dekomte-3':
           triggerDekomte3();
+          break;
         case 'dekomte-4':
           triggerDekomte4();
+          break;
         default:
           break;
       }

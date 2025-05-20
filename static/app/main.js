@@ -117,6 +117,11 @@ document.addEventListener('DOMContentLoaded', function () {
   const downloadSonnek = document.querySelector("#download-sonnek")
   const downloadTermomeccanica = document.querySelector("#download-termomeccanica")
   const downloadUreaKnowHow = document.querySelector("#download-ureaknowhow")
+  const downloadDekomte1 = document.querySelector("#download-dekomte-1")
+  const downloadDekomte2 = document.querySelector("#download-dekomte-2")
+  const downloadDekomte3 = document.querySelector("#download-dekomte-3")
+  const downloadDekomte4 = document.querySelector("#download-dekomte-4")
+
 
   const form = document.querySelector("#catalogoForm");
   const submitButton = document.querySelector("#sendButton");
@@ -208,6 +213,26 @@ document.addEventListener('DOMContentLoaded', function () {
     downloadFlag = 'ureaknowhow'
   })
 
+  downloadDekomte1.addEventListener("click", function(e) {
+    e.preventDefault();
+    downloadFlag = 'dekomte-1'
+ })
+
+  downloadDekomte2.addEventListener("click", function(e) {
+    e.preventDefault();
+    downloadFlag = 'dekomte-2'
+ })
+
+  downloadDekomte3.addEventListener("click", function(e) {
+    e.preventDefault();
+    downloadFlag = 'dekomte-3'
+ })
+
+  downloadDekomte4.addEventListener("click", function(e) {
+    e.preventDefault();
+    downloadFlag = 'dekomte-4'
+ })
+
   form.addEventListener("submit", function (e) {
     e.preventDefault(); 
 
@@ -220,36 +245,64 @@ document.addEventListener('DOMContentLoaded', function () {
           break;
         case 'bft-1':
           triggerBftDownload1();
+          break;
         case 'bft-2':
           triggerBftDownload2();
+          break;
         case 'bft-3':
           triggerBftDownload3();
+          break;
         case 'bowers':
           triggerBowersDownload();
+          break;
         case 'breitenfeld':
           triggerBreitenfeld();
+          break;
         case 'gigkarasek':
           triggerGigkarasek();
+          break;
         case 'gmp':
           triggerGmp();
+          break;
         case 'lordsteel':
           triggerLordsteel();
+          break;
         case 'morandini':
           triggerMorandini();
+          break;
         case 'rmp':
           triggerRmp();
+          break;
         case 'sbn':
           triggerSbn();
+          break;
         case 'schlick':
           triggerSchlick();
+          break;
         case 'schmidtclemmens':
           triggerSchmidtClemmens();
+          break;
         case 'sonnek':
           triggerSonnek();
+          break;
         case 'termomeccanica':
           triggerTermomeccanica();
+          break;
         case 'ureaknowhow':
           triggerUreaKnowHow();
+          break;
+        case 'dekomte-1':
+          triggerDekomte1();
+          break;
+        case 'dekomte-2':
+          triggerDekomte2();
+          break;
+        case 'dekomte-3':
+          triggerDekomte3();
+          break;
+        case 'dekomte-4':
+          triggerDekomte4();
+          break;
         default:
           break;
       }
@@ -389,7 +442,7 @@ document.addEventListener('DOMContentLoaded', function () {
   // schlick pdf
   function triggerSchlick() {
     const element = document.createElement("a")
-    element.href = "static/app/pdfs/Schlick.pdf"
+    element.href = "/static/app/pdfs/Schlick.pdf"
     element.download = ""
     document.body.appendChild(element);
     element.click();
@@ -399,7 +452,7 @@ document.addEventListener('DOMContentLoaded', function () {
   // schmidt clemens pdf
   function triggerSchmidtClemmens() {
     const element = document.createElement("a")
-    element.href = "static/app/pdfs/Schmidt_Clemens.pdf"
+    element.href = "/static/app/pdfs/Schmidt_Clemens.pdf"
     element.download = ""
     document.body.appendChild(element);
     element.click();
@@ -409,7 +462,7 @@ document.addEventListener('DOMContentLoaded', function () {
   // sonnek pdf
   function triggerSonnek() {
     const element = document.createElement("a")
-    element.href = "static/app/pdfs/Sonnek.pdf"
+    element.href = "/static/app/pdfs/Sonnek.pdf"
     element.download = ""
     document.body.appendChild(element);
     element.click();
@@ -419,7 +472,7 @@ document.addEventListener('DOMContentLoaded', function () {
   // termomeccanica pdf
   function triggerTermomeccanica() {
     const element = document.createElement("a")
-    element.href = "static/app/pdfs/Termomeccanica.pdf"
+    element.href = "/static/app/pdfs/Termomeccanica.pdf"
     element.download = ""
     document.body.appendChild(element);
     element.click();
@@ -429,7 +482,47 @@ document.addEventListener('DOMContentLoaded', function () {
   // urea know how pdf
   function triggerUreaKnowHow() {
     const element = document.createElement("a")
-    element.href = "static/app/pdfs/UreaKnowHow.pdf"
+    element.href = "/static/app/pdfs/UreaKnowHow.pdf"
+    element.download = ""
+    document.body.appendChild(element);
+    element.click();
+    document.body.removeChild(element);
+  }
+
+  // dekomte-1 pdf
+  function triggerDekomte1() {
+    const element = document.createElement("a")
+    element.href = "/static/app/pdfs/BrochureDEKOMTEProfile.pdf"
+    element.download = ""
+    document.body.appendChild(element);
+    element.click();
+    document.body.removeChild(element);
+  }
+
+  // dekomte-2 pdf
+  function triggerDekomte2() {
+    const element = document.createElement("a")
+    element.href = "/static/app/pdfs/BrochureFabricExpansionJoints.pdf"
+    element.download = ""
+    document.body.appendChild(element);
+    element.click();
+    document.body.removeChild(element);
+  }
+
+  // dekomte-3 pdf
+  function triggerDekomte3() {
+    const element = document.createElement("a")
+    element.href = "/static/app/pdfs/BrochureGasTurbineandCombinedCyclePlants.pdf"
+    element.download = ""
+    document.body.appendChild(element);
+    element.click();
+    document.body.removeChild(element);
+  }
+
+  // dekomte-4 pdf
+  function triggerDekomte4() {
+    const element = document.createElement("a")
+    element.href = "/static/app/pdfs/BrochureSteamBoilerPlants.pdf"
     element.download = ""
     document.body.appendChild(element);
     element.click();
