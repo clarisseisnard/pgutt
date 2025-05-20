@@ -422,7 +422,7 @@ document.addEventListener('DOMContentLoaded', function () {
   // schlick pdf
   function triggerSchlick() {
     const element = document.createElement("a")
-    element.href = "static/app/pdfs/Schlick.pdf"
+    element.href = "/static/app/pdfs/Schlick.pdf"
     element.download = ""
     document.body.appendChild(element);
     element.click();
@@ -432,7 +432,7 @@ document.addEventListener('DOMContentLoaded', function () {
   // schmidt clemens pdf
   function triggerSchmidtClemmens() {
     const element = document.createElement("a")
-    element.href = "static/app/pdfs/Schmidt_Clemens.pdf"
+    element.href = "/static/app/pdfs/Schmidt_Clemens.pdf"
     element.download = ""
     document.body.appendChild(element);
     element.click();
@@ -442,7 +442,7 @@ document.addEventListener('DOMContentLoaded', function () {
   // sonnek pdf
   function triggerSonnek() {
     const element = document.createElement("a")
-    element.href = "static/app/pdfs/Sonnek.pdf"
+    element.href = "/static/app/pdfs/Sonnek.pdf"
     element.download = ""
     document.body.appendChild(element);
     element.click();
@@ -452,7 +452,7 @@ document.addEventListener('DOMContentLoaded', function () {
   // termomeccanica pdf
   function triggerTermomeccanica() {
     const element = document.createElement("a")
-    element.href = "static/app/pdfs/Termomeccanica.pdf"
+    element.href = "/static/app/pdfs/Termomeccanica.pdf"
     element.download = ""
     document.body.appendChild(element);
     element.click();
@@ -462,7 +462,7 @@ document.addEventListener('DOMContentLoaded', function () {
   // urea know how pdf
   function triggerUreaKnowHow() {
     const element = document.createElement("a")
-    element.href = "static/app/pdfs/UreaKnowHow.pdf"
+    element.href = "/static/app/pdfs/UreaKnowHow.pdf"
     element.download = ""
     document.body.appendChild(element);
     element.click();
@@ -472,7 +472,7 @@ document.addEventListener('DOMContentLoaded', function () {
   // dekomte-1 pdf
   function triggerDekomte1() {
     const element = document.createElement("a")
-    element.href = "static/app/pdfs/BrochureDEKOMTEProfile.pdf"
+    element.href = "/static/app/pdfs/BrochureDEKOMTEProfile.pdf"
     element.download = ""
     document.body.appendChild(element);
     element.click();
@@ -482,7 +482,7 @@ document.addEventListener('DOMContentLoaded', function () {
   // dekomte-2 pdf
   function triggerDekomte2() {
     const element = document.createElement("a")
-    element.href = "static/app/pdfs/BrochureFabricExpansionJoints.pdf"
+    element.href = "/static/app/pdfs/BrochureFabricExpansionJoints.pdf"
     element.download = ""
     document.body.appendChild(element);
     element.click();
@@ -492,7 +492,7 @@ document.addEventListener('DOMContentLoaded', function () {
   // dekomte-3 pdf
   function triggerDekomte3() {
     const element = document.createElement("a")
-    element.href = "static/app/pdfs/BrochureGasTurbineandCombinedCyclePlants.pdf"
+    element.href = "/static/app/pdfs/BrochureGasTurbineandCombinedCyclePlants.pdf"
     element.download = ""
     document.body.appendChild(element);
     element.click();
@@ -502,7 +502,7 @@ document.addEventListener('DOMContentLoaded', function () {
   // dekomte-4 pdf
   function triggerDekomte4() {
     const element = document.createElement("a")
-    element.href = "static/app/pdfs/BrochureSteamBoilerPlants.pdf"
+    element.href = "/static/app/pdfs/BrochureSteamBoilerPlants.pdf"
     element.download = ""
     document.body.appendChild(element);
     element.click();
