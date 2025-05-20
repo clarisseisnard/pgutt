@@ -215,22 +215,22 @@ document.addEventListener('DOMContentLoaded', function () {
 
   downloadDekomte1.addEventListener("click", function(e) {
     e.preventDefault();
-    downloadFlag = 'dekompte-1'
+    downloadFlag = 'dekomte-1'
  })
 
   downloadDekomte2.addEventListener("click", function(e) {
     e.preventDefault();
-    downloadFlag = 'dekompte-2'
+    downloadFlag = 'dekomte-2'
  })
 
   downloadDekomte3.addEventListener("click", function(e) {
     e.preventDefault();
-    downloadFlag = 'dekompte-3'
+    downloadFlag = 'dekomte-3'
  })
 
   downloadDekomte4.addEventListener("click", function(e) {
     e.preventDefault();
-    downloadFlag = 'dekompte-4'
+    downloadFlag = 'dekomte-4'
  })
 
   form.addEventListener("submit", function (e) {
