@@ -117,6 +117,11 @@ document.addEventListener('DOMContentLoaded', function () {
   const downloadSonnek = document.querySelector("#download-sonnek")
   const downloadTermomeccanica = document.querySelector("#download-termomeccanica")
   const downloadUreaKnowHow = document.querySelector("#download-ureaknowhow")
+  const downloadDekomte1 = document.querySelector("#download-dekomte-1")
+  const downloadDekomte2 = document.querySelector("#download-dekomte-2")
+  const downloadDekomte3 = document.querySelector("#download-dekomte-3")
+  const downloadDekomte4 = document.querySelector("#download-dekomte-4")
+
 
   const form = document.querySelector("#catalogoForm");
   const submitButton = document.querySelector("#sendButton");
@@ -208,6 +213,26 @@ document.addEventListener('DOMContentLoaded', function () {
     downloadFlag = 'ureaknowhow'
   })
 
+  downloadDekomte1.addEventListener("click", function(e) {
+    e.preventDefault();
+    downloadFlag = 'dekompte-1'
+ })
+
+  downloadDekomte2.addEventListener("click", function(e) {
+    e.preventDefault();
+    downloadFlag = 'dekompte-2'
+ })
+
+  downloadDekomte3.addEventListener("click", function(e) {
+    e.preventDefault();
+    downloadFlag = 'dekompte-3'
+ })
+
+  downloadDekomte4.addEventListener("click", function(e) {
+    e.preventDefault();
+    downloadFlag = 'dekompte-4'
+ })
+
   form.addEventListener("submit", function (e) {
     e.preventDefault(); 
 
@@ -250,6 +275,14 @@ document.addEventListener('DOMContentLoaded', function () {
           triggerTermomeccanica();
         case 'ureaknowhow':
           triggerUreaKnowHow();
+        case 'dekomte-1':
+          triggerDekomte1();
+        case 'dekomte-2':
+          triggerDekomte2();
+        case 'dekomte-3':
+          triggerDekomte3();
+        case 'dekomte-4':
+          triggerDekomte4();
         default:
           break;
       }
@@ -430,6 +463,46 @@ document.addEventListener('DOMContentLoaded', function () {
   function triggerUreaKnowHow() {
     const element = document.createElement("a")
     element.href = "static/app/pdfs/UreaKnowHow.pdf"
+    element.download = ""
+    document.body.appendChild(element);
+    element.click();
+    document.body.removeChild(element);
+  }
+
+  // dekomte-1 pdf
+  function triggerDekomte1() {
+    const element = document.createElement("a")
+    element.href = "static/app/pdfs/BrochureDEKOMTEProfile.pdf"
+    element.download = ""
+    document.body.appendChild(element);
+    element.click();
+    document.body.removeChild(element);
+  }
+
+  // dekomte-2 pdf
+  function triggerDekomte2() {
+    const element = document.createElement("a")
+    element.href = "static/app/pdfs/BrochureFabricExpansionJoints.pdf"
+    element.download = ""
+    document.body.appendChild(element);
+    element.click();
+    document.body.removeChild(element);
+  }
+
+  // dekomte-3 pdf
+  function triggerDekomte3() {
+    const element = document.createElement("a")
+    element.href = "static/app/pdfs/BrochureGasTurbineandCombinedCyclePlants.pdf"
+    element.download = ""
+    document.body.appendChild(element);
+    element.click();
+    document.body.removeChild(element);
+  }
+
+  // dekomte-4 pdf
+  function triggerDekomte4() {
+    const element = document.createElement("a")
+    element.href = "static/app/pdfs/BrochureSteamBoilerPlants.pdf"
     element.download = ""
     document.body.appendChild(element);
     element.click();
