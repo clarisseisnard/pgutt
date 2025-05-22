@@ -76,7 +76,7 @@ def siepmannwerke(request):
     return render(request, 'app/empresa/SIEPMANNWERKE.html')
 
 def termomeccanica(request):
-    return render(request, 'app/empresa/termomeccanica.html')
+    return render(request, 'app/empresa/TERMOMECCANICA.html')
 
 def vana(request):
     return render(request, 'app/empresa/vana.html')
