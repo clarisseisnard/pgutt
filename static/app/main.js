@@ -106,6 +106,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const downloadBft3 = document.querySelector("#download-bft-3");
   const downloadBowers = document.querySelector("#download-bowers");
   const downloadBreitenfeld = document.querySelector("#download-breitenfeld");
+  const downloadConthermo = document.querySelector("#download-conthermo");
   const downloadGigkarasek = document.querySelector("#download-gigkarasek");
   const downloadGmp = document.querySelector("#download-gmp");
   const downloadLordsteel = document.querySelector("#download-lordsteel");
@@ -156,6 +157,11 @@ document.addEventListener('DOMContentLoaded', function () {
   downloadBreitenfeld.addEventListener("click", function(e) {
     e.preventDefault();
     downloadFlag = 'breitenfeld'
+  })
+
+  downloadConthermo.addEventListener("click", function(e) {
+    e.preventDefault();
+    downloadFlag = 'conthermo'
   })
 
   downloadGigkarasek.addEventListener("click", function(e) {
@@ -257,6 +263,9 @@ document.addEventListener('DOMContentLoaded', function () {
           break;
         case 'breitenfeld':
           triggerBreitenfeld();
+          break;
+        case 'conthermo':
+          triggerConthermo();
           break;
         case 'gigkarasek':
           triggerGigkarasek();
