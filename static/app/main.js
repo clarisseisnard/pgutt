@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const downloadBowers = document.querySelector("#download-bowers");
   const downloadBreitenfeld = document.querySelector("#download-breitenfeld");
   const downloadConthermo = document.querySelector("#download-conthermo");
-  const downloadGigkarasek = document.querySelector("#download-gigkarasek");
+  const downloadGKT = document.querySelector("#download-gkt");
   const downloadGmp = document.querySelector("#download-gmp");
   const downloadLordsteel = document.querySelector("#download-lordsteel");
   const downloadMorandini = document.querySelector("#download-morandini");
@@ -164,9 +164,9 @@ document.addEventListener('DOMContentLoaded', function () {
     downloadFlag = 'conthermo'
   })
 
-  downloadGigkarasek.addEventListener("click", function(e) {
+  downloadGKT.addEventListener("click", function(e) {
     e.preventDefault();
-    downloadFlag = 'gigkarasek'
+    downloadFlag = 'gkt'
   })
 
   downloadGmp.addEventListener("click", function(e) {
@@ -267,8 +267,8 @@ document.addEventListener('DOMContentLoaded', function () {
         case 'conthermo':
           triggerConthermo();
           break;
-        case 'gigkarasek':
-          triggerGigkarasek();
+        case 'gkt':
+          triggerGKT();
           break;
         case 'gmp':
           triggerGmp();
@@ -388,10 +388,10 @@ document.addEventListener('DOMContentLoaded', function () {
     document.body.removeChild(element);
   }
 
-  // gigkarasek pdf
-  function triggerGigkarasek() {
+  // gkt pdf
+  function triggergkt() {
     const element = document.createElement("a")
-    element.href = "/static/app/pdfs/GIGKarasek-Portolio-English.pdf"
+    element.href = "/static/app/pdfs/GKT-Portolio-English.pdf"
     element.download = ""
     document.body.appendChild(element);
     element.click();

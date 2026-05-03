@@ -48,8 +48,8 @@ def christofgroup(request):
 def fundicaomorandini(request):
     return render(request, 'app/empresa/fundicaomorandini.html')
 
-def gigkarasek(request):
-    return render(request, 'app/empresa/GIGKARASEK.html')
+def gkt(request):
+    return render(request, 'app/empresa/GKT.html')
 
 def gmp(request):
     return render(request, 'app/empresa/GMP.html')
