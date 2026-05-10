@@ -100,441 +100,154 @@ document.addEventListener('DOMContentLoaded', function() {
 // Download after valid form ----------------------------------------------------------------------------------------------------------------------------------------------------
 
 document.addEventListener('DOMContentLoaded', function () {
-  const downloadBallestra = document.querySelector("#download-ballestra");
-  const downloadBft1 = document.querySelector("#download-bft-1");
-  const downloadBft2 = document.querySelector("#download-bft-2");
-  const downloadBft3 = document.querySelector("#download-bft-3");
-  const downloadBowers = document.querySelector("#download-bowers");
-  const downloadBreitenfeld = document.querySelector("#download-breitenfeld");
-  const downloadConthermo = document.querySelector("#download-conthermo");
-  const downloadGKT = document.querySelector("#download-gkt");
-  const downloadGmp = document.querySelector("#download-gmp");
-  const downloadLordsteel = document.querySelector("#download-lordsteel");
-  const downloadMorandini = document.querySelector("#download-morandini");
-  const downloadRmp = document.querySelector("#download-rmp");
-  const downloadSbn = document.querySelector("#download-sbn");
-  const downloadSchlick = document.querySelector("#download-schlick");
-  const downloadSchmidtClemmens = document.querySelector("#download-schmidtclemens")
-  const downloadSonnek = document.querySelector("#download-sonnek")
-  const downloadTermomeccanica = document.querySelector("#download-termomeccanica")
-  const downloadUreaKnowHow = document.querySelector("#download-ureaknowhow")
-  const downloadDekomte1 = document.querySelector("#download-dekomte-1")
-  const downloadDekomte2 = document.querySelector("#download-dekomte-2")
-  const downloadDekomte3 = document.querySelector("#download-dekomte-3")
-  const downloadDekomte4 = document.querySelector("#download-dekomte-4")
-
-
   const form = document.querySelector("#catalogoForm");
-  const submitButton = document.querySelector("#sendButton");
+  const popupScreen = document.querySelector(".pop-up-download");
+  const overlay = document.querySelector("#overlay");
 
-  let downloadFlag = null;
+  let selectedPdf = null;
 
-  downloadBallestra.addEventListener("click", function (e) {
-    e.preventDefault();
-    downloadFlag = 'ballestra';
+  document.querySelectorAll(".popup").forEach(function(link) {
+    link.addEventListener("click", function(e) {
+      e.preventDefault();
+
+      selectedPdf = this.dataset.pdf;
+
+      popupScreen.classList.add("openpopup");
+      overlay.classList.add("openpopup");
+      document.body.style.overflow = "hidden";
+    });
   });
 
-  downloadBft1.addEventListener("click", function(e) {
-    e.preventDefault();
-    downloadFlag = 'bft-1';
-  })
+  if (form) {
+    form.addEventListener("submit", function(e) {
+      e.preventDefault();
 
-  downloadBft2.addEventListener("click", function(e) {
-    e.preventDefault();
-    downloadFlag = 'bft-2';
-  })
-
-  downloadBft3.addEventListener("click", function(e) {
-    e.preventDefault();
-    downloadFlag = 'bft-3';
-  })
-
-  downloadBowers.addEventListener("click", function(e) {
-    e.preventDefault();
-    downloadFlag = 'bowers'
-  })
-
-  downloadBreitenfeld.addEventListener("click", function(e) {
-    e.preventDefault();
-    downloadFlag = 'breitenfeld'
-  })
-
-  downloadConthermo.addEventListener("click", function(e) {
-    e.preventDefault();
-    downloadFlag = 'conthermo'
-  })
-
-  downloadGKT.addEventListener("click", function(e) {
-    e.preventDefault();
-    downloadFlag = 'gkt'
-  })
-
-  downloadGmp.addEventListener("click", function(e) {
-    e.preventDefault();
-    downloadFlag = 'gmp'
-  })
-
-  downloadLordsteel.addEventListener("click", function(e) {
-    e.preventDefault();
-    downloadFlag = 'lordsteel'
-  })
-
-  downloadMorandini.addEventListener("click", function(e) {
-    e.preventDefault();
-    downloadFlag = 'morandini'
-  })
-
-  downloadRmp.addEventListener("click", function(e) {
-    e.preventDefault();
-    downloadFlag = 'rmp'
-  })
-
-  downloadSbn.addEventListener("click", function(e) {
-    e.preventDefault();
-    downloadFlag = 'sbn'
-  })
-
-  downloadSchlick.addEventListener("click", function(e) {
-    e.preventDefault();
-    downloadFlag = 'schlick'
-  })
-
-  downloadSchmidtClemmens.addEventListener("click", function(e) {
-    e.preventDefault();
-    downloadFlag = 'schmidtclemmens'
-  })
-
-  downloadSonnek.addEventListener("click", function(e) {
-    e.preventDefault();
-    downloadFlag = 'sonnek'
-  })
-
-  downloadTermomeccanica.addEventListener("click", function(e) {
-    e.preventDefault();
-    downloadFlag = 'termomeccanica'
-  })
-
-  downloadUreaKnowHow.addEventListener("click", function(e) {
-    e.preventDefault();
-    downloadFlag = 'ureaknowhow'
-  })
-
-  downloadDekomte1.addEventListener("click", function(e) {
-    e.preventDefault();
-    downloadFlag = 'dekomte-1'
- })
-
-  downloadDekomte2.addEventListener("click", function(e) {
-    e.preventDefault();
-    downloadFlag = 'dekomte-2'
- })
-
-  downloadDekomte3.addEventListener("click", function(e) {
-    e.preventDefault();
-    downloadFlag = 'dekomte-3'
- })
-
-  downloadDekomte4.addEventListener("click", function(e) {
-    e.preventDefault();
-    downloadFlag = 'dekomte-4'
- })
-
-  form.addEventListener("submit", function (e) {
-    e.preventDefault(); 
-
-    if (form.checkValidity()) {
-      form.submit();
-
-      switch(downloadFlag) {
-        case 'ballestra':
-          triggerBallestraDownload();
-          break;
-        case 'bft-1':
-          triggerBftDownload1();
-          break;
-        case 'bft-2':
-          triggerBftDownload2();
-          break;
-        case 'bft-3':
-          triggerBftDownload3();
-          break;
-        case 'bowers':
-          triggerBowersDownload();
-          break;
-        case 'breitenfeld':
-          triggerBreitenfeld();
-          break;
-        case 'conthermo':
-          triggerConthermo();
-          break;
-        case 'gkt':
-          triggerGKT();
-          break;
-        case 'gmp':
-          triggerGmp();
-          break;
-        case 'lordsteel':
-          triggerLordsteel();
-          break;
-        case 'morandini':
-          triggerMorandini();
-          break;
-        case 'rmp':
-          triggerRmp();
-          break;
-        case 'sbn':
-          triggerSbn();
-          break;
-        case 'schlick':
-          triggerSchlick();
-          break;
-        case 'schmidtclemmens':
-          triggerSchmidtClemmens();
-          break;
-        case 'sonnek':
-          triggerSonnek();
-          break;
-        case 'termomeccanica':
-          triggerTermomeccanica();
-          break;
-        case 'ureaknowhow':
-          triggerUreaKnowHow();
-          break;
-        case 'dekomte-1':
-          triggerDekomte1();
-          break;
-        case 'dekomte-2':
-          triggerDekomte2();
-          break;
-        case 'dekomte-3':
-          triggerDekomte3();
-          break;
-        case 'dekomte-4':
-          triggerDekomte4();
-          break;
-        default:
-          break;
+      if (!selectedPdf) {
+        alert("Selecione um catálogo antes de enviar.");
+        return;
       }
-    }
-  });
+
+      const element = document.createElement("a");
+      element.href = selectedPdf;
+      element.download = "";
+      document.body.appendChild(element);
+      element.click();
+      document.body.removeChild(element);
+    });
+  }
+});
 
   // ballestra pdf
   function triggerBallestraDownload() {
-    const element = document.createElement("a");
-    element.href = "/static/app/pdfs/Ballestra_DSSC_Chemicals.pdf";
-    element.download = ""
-    document.body.appendChild(element);
-    element.click();
-    document.body.removeChild(element);
-  }
+  const element = document.createElement("a");
+  element.href = "/static/app/pdfs/Ballestra_DSSC_Chemicals.pdf";
+  element.download = "Ballestra_DSSC_Chemicals.pdf";
+  document.body.appendChild(element);
+  element.click();
+  document.body.removeChild(element);
+ }
 
   // bft ecotron
   function triggerBftDownload1() {
-    const element = document.createElement("a");
-    element.href = "/static/app/pdfs/BFT-ECOTRON-EN-1.pdf";
-    element.download = ""
-    document.body.appendChild(element);
-    element.click();
-    document.body.removeChild(element);
+    window.open("/static/app/pdfs/BFT-ECOTRON-EN-1.pdf");
   }
 
    // bft high pressure 
    function triggerBftDownload2() {
-    const element = document.createElement("a");
-    element.href = "/static/app/pdfs/BFT-High-Pressure-Pumps-Chemical-Application-EN.pdf";
-    element.download = ""
-    document.body.appendChild(element);
-    element.click();
-    document.body.removeChild(element);
+    window.open("/static/app/pdfs/BFT-High-Pressure-Pumps-Chemical-Application-EN.pdf");
   }
 
   // bft servotron
   function triggerBftDownload3() {
-    const element = document.createElement("a")
-    element.href = "/static/app/pdfs/BFT-SERVOTRON-EN-1.pdf"
-    element.download = ""
-    document.body.appendChild(element);
-    element.click();
-    document.body.removeChild(element);
+    window.open("/static/app/pdfs/BFT-SERVOTRON-EN-1.pdf");
   }
 
   // bowers pdf
   function triggerBowersDownload() {
-    const element = document.createElement("a")
-    element.href = "/static/app/pdfs/Bowers_ones.pdf"
-    element.download = ""
-    document.body.appendChild(element);
-    element.click();
-    document.body.removeChild(element);
+    window.open("/static/app/pdfs/Bowers_ones.pdf");
   }
 
   // breitenfeld pdf
   function triggerBreitenfeld() {
-    const element = document.createElement("a")
-    element.href = "/static/app/pdfs/Company_Presentation_Breitenfeld_Steel_AG_2024_ENG.PDF"
-    element.download = ""
-    document.body.appendChild(element);
-    element.click();
-    document.body.removeChild(element);
+     window.open("/static/app/pdfs/Company_Presentation_Breitenfeld_Steel_AG_2024_ENG.PDF");
   }
 
   // conthermo pdf
   function triggerConthermo() {
-    const element = document.createElement("a")
-    element.href = "/static/app/pdfs/Conthermo.pdf"
-    element.download = ""
-    document.body.appendChild(element);
-    element.click();
-    document.body.removeChild(element);
+     window.open("/static/app/pdfs/Conthermo.pdf");
   }
 
   // gkt pdf
-  function triggergkt() {
-    const element = document.createElement("a")
-    element.href = "/static/app/pdfs/GKT-Portolio-English.pdf"
-    element.download = ""
-    document.body.appendChild(element);
-    element.click();
-    document.body.removeChild(element);
+  function triggerGKT() {
+     window.open("/static/app/pdfs/GKT-Portfolio-English.pdf");
   }
 
   // gmp pdf
   function triggerGmp() {
-    const element = document.createElement("a")
-    element.href = "/static/app/pdfs/GMP.pdf"
-    element.download = ""
-    document.body.appendChild(element);
-    element.click();
-    document.body.removeChild(element);
+     window.open("/static/app/pdfs/GMP.pdf");
   }
 
   // lordsteel pdf
   function triggerLordsteel() {
-    const element = document.createElement("a")
-    element.href = "/static/app/pdfs/Lord_steel.pdf"
-    element.download = ""
-    document.body.appendChild(element);
-    element.click();
-    document.body.removeChild(element);
+     window.open("/static/app/pdfs/Lord_steel.pdf");
   }
 
   // morandini pdf
   function triggerMorandini() {
-    const element = document.createElement("a")
-    element.href = "/static/app/pdfs/Morandini.pdf"
-    element.download = ""
-    document.body.appendChild(element);
-    element.click();
-    document.body.removeChild(element);
+    window.open("/static/app/pdfs/Morandini.pdf");
   }
 
   // rmp pdf
   function triggerRmp() {
-    const element = document.createElement("a")
-    element.href = "/static/app/pdfs/RMP_Company_2024.pdf"
-    element.download = ""
-    document.body.appendChild(element);
-    element.click();
-    document.body.removeChild(element);
+    window.open("/static/app/pdfs/RMP_Company_2024.pdf");
   }
 
   // sbn pdf
   function triggerSbn() {
-    const element = document.createElement("a")
-    element.href = "/static/app/pdfs/SBN.pdf"
-    element.download = ""
-    document.body.appendChild(element);
-    element.click();
-    document.body.removeChild(element);
+    window.open("/static/app/pdfs/SBN.pdf");
   }
 
   // schlick pdf
   function triggerSchlick() {
-    const element = document.createElement("a")
-    element.href = "/static/app/pdfs/Schlick.pdf"
-    element.download = ""
-    document.body.appendChild(element);
-    element.click();
-    document.body.removeChild(element);
+    window.open("/static/app/pdfs/Schlick.pdf");
   }
 
   // schmidt clemens pdf
   function triggerSchmidtClemmens() {
-    const element = document.createElement("a")
-    element.href = "/static/app/pdfs/Schmidt_Clemens.pdf"
-    element.download = ""
-    document.body.appendChild(element);
-    element.click();
-    document.body.removeChild(element);
+    window.open("/static/app/pdfs/Schmidt_Clemens.pdf");
   }
 
   // sonnek pdf
   function triggerSonnek() {
-    const element = document.createElement("a")
-    element.href = "/static/app/pdfs/Sonnek.pdf"
-    element.download = ""
-    document.body.appendChild(element);
-    element.click();
-    document.body.removeChild(element);
+    window.open("/static/app/pdfs/Sonnek.pdf");
   }
 
   // termomeccanica pdf
   function triggerTermomeccanica() {
-    const element = document.createElement("a")
-    element.href = "/static/app/pdfs/Termomeccanica.pdf"
-    element.download = ""
-    document.body.appendChild(element);
-    element.click();
-    document.body.removeChild(element);
+    window.open("/static/app/pdfs/Termomeccanica.pdf");
   }
 
   // urea know how pdf
   function triggerUreaKnowHow() {
-    const element = document.createElement("a")
-    element.href = "/static/app/pdfs/UreaKnowHow.pdf"
-    element.download = ""
-    document.body.appendChild(element);
-    element.click();
-    document.body.removeChild(element);
+    window.open("/static/app/pdfs/UreaKnowHow.pdf");
   }
 
   // dekomte-1 pdf
   function triggerDekomte1() {
-    const element = document.createElement("a")
-    element.href = "/static/app/pdfs/BrochureDEKOMTEProfile.pdf"
-    element.download = ""
-    document.body.appendChild(element);
-    element.click();
-    document.body.removeChild(element);
+    window.open("/static/app/pdfs/BrochureDEKOMTEProfile.pdf");
   }
 
   // dekomte-2 pdf
   function triggerDekomte2() {
-    const element = document.createElement("a")
-    element.href = "/static/app/pdfs/BrochureFabricExpansionJoints.pdf"
-    element.download = ""
-    document.body.appendChild(element);
-    element.click();
-    document.body.removeChild(element);
+    window.open("/static/app/pdfs/BrochureFabricExpansionJoints.pdf");
   }
 
   // dekomte-3 pdf
   function triggerDekomte3() {
-    const element = document.createElement("a")
-    element.href = "/static/app/pdfs/BrochureGasTurbineandCombinedCyclePlants.pdf"
-    element.download = ""
-    document.body.appendChild(element);
-    element.click();
-    document.body.removeChild(element);
+    window.open("/static/app/pdfs/BrochureGasTurbineandCombinedCyclePlants.pdf");
   }
 
   // dekomte-4 pdf
   function triggerDekomte4() {
-    const element = document.createElement("a")
-    element.href = "/static/app/pdfs/BrochureSteamBoilerPlants.pdf"
-    element.download = ""
-    document.body.appendChild(element);
-    element.click();
-    document.body.removeChild(element);
-  }
-});
+    window.open("/static/app/pdfs/BrochureSteamBoilerPlants.pdf");
+   }
